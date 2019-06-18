@@ -3,9 +3,7 @@ The assistant who gives you personalised advice on your rights, obligations and 
 
 ## General information
 The concept, logic tree and original answer sheets in French were developed by Micaela Crespo from the Department of Research and International Relations of the University of Lausanne.
-The source code for this tool was developed by Thomas Henkel of the Cantonal and University Library of Friboug. The code is available to all on our GitHub page. It can be reused, modified, built upon and improved freely, but we ask that the authorship of the code be attributed to the Papago project.
-
-It is possible to reuse, integrate and build upon Papago provided that it is clearly stated that it is a tool made available by the Papago project.
+The source code for this tool was developed by Thomas Henkel of the Cantonal and University Library of Friboug. It can be reused, modified, built upon and improved freely, but we ask that the authorship of the code be attributed to the Papago project.
 
 If you have any questions or comments about Papago, you can write to us at open.access@unil.ch. In addition, if you encounter an error or malfunction, do not hesitate to report it to us.
 
