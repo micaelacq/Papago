@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Papago</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+<script>
+
+// *** parameters start ***
+//default language
+var lang = "fr";
+//URL for Papago content tree
+var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
+//URL for information pdf sheets
+var pdfUrl = "https://kutt.it/";
+//suffix for pdf sheets (including ".")
+var pdfSuffix = "";
+//using bootstrap 3?
+var bootstrap3=false;
+// *** parameters end **
+
+var translate = {
+    "fr" : {
+      "Fiche": "Fiche",
+      "text" : "La fiche ci-dessous vous fournira des conseils sur les possibilit\u00e9s de financement ainsi que sur vos droits et obligations concernant cette publication.",
+      "error" : "Papago n\'est pas accessible pour le moment.",
+      "select": "Veuillez sélectionner une option."},
+    "de" : {
+      "Fiche": "Infoblatt",
+      "text" : "Folgendes Infoblatt enthält Ratschläge zu Finanzierungsmöglichkeiten sowie zu Ihren Rechten und Pflichten in Bezug auf diese Publikation.",
+      "error" : "Papago ist zur Zeit nicht erreichbar.",
+      "select": "Wählen Sie bitte eine Option aus."},
+    "en" : {
+      "Fiche": "Information Sheet",
+      "text" : "The following factsheet contains further advice on financing options and on your rights and obligations in relation to this publication.",
+      "error" : "Papago is not avialable for the moment.",
+      "select": "Select an option, plrease."},
+}
+
+var parent = oldItem = "";
+
+function format(item) {
+  if (item.substr(0,5) == 'Fiche') {
+    parent = oldItem;
+    item.replace("Fiche", translate[lang]["Fiche"]);
+    url = item.split(' ');
+    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + url[1] + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
+    $('#submit').hide();
+    $('#restart').show();
+  }
+  else {
+  $('#restart').hide();
+	$('#submit').show();
+    code = '<p>' + papago[item]['label'] + '</p>';
+    $.each(papago[item]['options'], function(index,value) {
+      if (bootstrap3) {
+        code = code+'<div class="radio"><label><input id="opt' + index + '" type="radio" name="option" value="' +value['value'] + '">' + value['option'] + '</label></div>';
+      }
+      else {
+        code = code+'<div class="form-check"><input class="form-check-input" id="opt' + index + '" type="radio" name="option" value="' +value['value'] + '"><label class="form-check-label" for="opt' + index + '">'+value['option'] + '</label></div>';
+      }
+      
+      if (papago[item]['parent']) {
+		    $('#back').show();
+	    }
+	    else {
+		    $('#back').hide();
+	    }
+	    parent = papago[item]['parent'];
+      oldItem = item;
+    });
+  }
+  $('#question').html(code);
+}
+
+function reformat (){
+ value = $("input[name='option']:checked").val();
+ if(value) {
+   format(value);
+ }
+ else {
+   window.alert(translate[lang]['select']);
+ }
+ return false;
+}
+
+function goback() {
+
+	format(parent);
+}
+ 
+$(document).ready(function(){
+  param = {};
+  str = window.location.search.substr(1);
+  if(str) {
+    pairs = str.split('&');
+    for (i=0; i<pairs.length; i++) {
+      part = pairs[i].split('=');
+      param[part[0]] = part[1];
+    }
+  }
+  if(param['lang'] && translate[param['lang']]) {
+    lang = param['lang'];
+  }
+  $.getJSON( papagoUrl + "papago-" + lang + ".json")
+    .done(function( data ) {
+      papago = data;
+      $('#buttons').show();
+      format("1");
+    })
+    .fail(function(xhr, status, error) {
+      $('form').html(translate[lang]['error']);
+      console.log( error );
+    });
+});
+</script>
+<div style="margin: 1rem">
+  <h1>Papago</h1>
+  <form onSubmit="return reformat()">
+    <div id="question" style="margin-bottom: 1rem">
+    </div>
+    <div id="buttons" style="display:none">
+      <button id="submit" type="submit" class="btn btn-primary">submit&nbsp;<i class="fa fa-arrow-circle-o-right"></i></button>
+      <a id="back" href="javascript:goback();" class="btn btn-secondary btn-default" style="display:none"><i class="fa fa-chevron-left"></i>&nbsp;back</a>
+      <a id="restart" href="javascript:location.reload()" class="btn btn-secondary btn-default" style="display:none"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;restart</a>
+    </div>
+  </form>
+</div>
+</body>
+</html> 
