@@ -2,9 +2,9 @@
 The assistant who gives you personalised advice on your rights, obligations and funding opportunities regarding Open Access publishing in Switzerland
 ## Use Cases
 ### Standalone GitHub Page
-Just goo to https://micaelacq.github.io/Papago an you can use Papago out of the box.
+Just go to https://micaelacq.github.io/Papago and you can use Papago out of the box.
 
-For different languages, you can add a language paramater. Following languages are supported:
+For different languages, you can add a language paramater. The following languages are supported:
 - https://micaelacq.github.io/Papago/?lang=fr (french: default)
 - https://micaelacq.github.io/Papago/?lang=de (german)
 - https://micaelacq.github.io/Papago/?lang=en (english)
