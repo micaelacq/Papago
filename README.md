@@ -27,4 +27,4 @@ There are other parameters you can change in the paremeter section :
 - pdfSuffix: Suffix of your PDF files (including "."), e.g. ".pdf".
 - bootstrap3: set to `true` if you are using _Bootstrap 3_
 
-To change the title or spacing you can work on the html code at the bottom of the document (after the `</script`> tag).
+To change the title or spacing you can work on the html code at the bottom of the document (after the `</script>` tag).
