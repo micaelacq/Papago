@@ -37,9 +37,9 @@ The flowchart can be broken down into 2 phases (these two phases are transparent
 Just go to https://micaelacq.github.io/Papago and you can use Papago out of the box.
 
 For different languages, you can add a language paramater. The following languages are supported:
-- https://micaelacq.github.io/Papago/?lang=fr (french: default)
-- https://micaelacq.github.io/Papago/?lang=de (german)
-- https://micaelacq.github.io/Papago/?lang=en (english)
+- https://micaelacq.github.io/Papago/?lang=fr (French: default)
+- https://micaelacq.github.io/Papago/?lang=de (German)
+- https://micaelacq.github.io/Papago/?lang=en (English)
 
 It is possible to integrate the standalone GitHub page with an iframe into your website:
 ```html
