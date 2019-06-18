@@ -22,7 +22,7 @@ If your site uses _Bootstrap 3_ you can set the parameter _bootstrap3_ to `true`
 
 There are other parameters you can change in the paremeter section :
 - lang: language of Papago
-- papagoUrl: URL of the Papago decision tree, directs to the [trees](trees) directory
-- pdfUrl: URL of the PDF directory. So you can integrate your own PDFs
-- pdfSuffix: Suffix of your PDF files (including "."), e.g. ".pdf"
-- bootstrap3: set to `true` if you ar useing _Bootstrap 3_
+- papagoUrl: URL of the Papago decision tree, directs to the [trees](trees) directory.
+- pdfUrl: URL of the PDF directory. In this way you can integrate your own PDFs.
+- pdfSuffix: Suffix of your PDF files (including "."), e.g. ".pdf".
+- bootstrap3: set to `true` if you are using _Bootstrap 3_
