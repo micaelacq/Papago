@@ -109,7 +109,7 @@ $(document).ready(function(){
     .done(function( data ) {
       papago = data;
       $('#buttons').show();
-      format("1");
+      format("0");
     })
     .fail(function(xhr, status, error) {
       $('form').html(translate[lang]['error']);
