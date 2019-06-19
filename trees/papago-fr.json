@@ -25,7 +25,7 @@
                 "value": "5"
             }
         ],
-        "parent": ""
+        "parent": "0"
     },
     "2": {
         "label": "Quel est le format de votre publication?",
@@ -95,7 +95,7 @@
                 "value": "12"
             }
         ],
-        "parent": ""
+        "parent": "0"
     },
     "7": {
         "label": "Quel est le format de votre publication?",
