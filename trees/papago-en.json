@@ -1,90 +1,90 @@
 {
     "0": {
-        "label": "Votre publication est-elle issue d\u2019un projet de recherche financ\u00e9 au moins pour moiti\u00e9 par un instrument de financement europ\u00e9en ou du Fonds National (FNS)?",
+        "label": "Is your publication the result of a research project funded (at least 50%) by a European funding scheme or by the Swiss National Science Foundation (SNSF)?",
         "options": [
             {
-                "option": "Non",
+                "option": "No",
                 "value": "1"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "6"
             }
         ],
         "parent": ""
     },
     "1": {
-        "label": "Est-ce que votre salaire est pris en charge au moins pour moiti\u00e9 par des fonds publics ?",
+        "label": "Is at least half of your salary covered by public funds?",
         "options": [
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "2"
             },
             {
-                "option": "Non",
+                "option": "No",
                 "value": "5"
             }
         ],
         "parent": "0"
     },
     "2": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
-                "option": "Article ou chapitre de livre",
+                "option": "Article or book chapter",
                 "value": "3"
             },
             {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
+                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "Fiche 11A"
             }
         ],
         "parent": "1"
     },
     "3": {
-        "label": "Votre publication est ou sera",
+        "label": "Your publication is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9e en Gold Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "Fiche 111A"
             },
             {
-                "option": "Difus\u00e9e uniquement via un acc\u00e8s par abonnement en ligne/papier",
+                "option": "Available only via online/paper subscription access",
                 "value": "4"
             }
         ],
         "parent": "2"
     },
     "4": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur? (contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue...)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche 1111A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche 1111B"
             }
         ],
         "parent": "3"
     },
     "5": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
-                "option": "Article ou chapitre de livre",
+                "option": "Article or book chapter",
                 "value": "Fiche 12A"
             },
             {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
+                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "Fiche 12B"
             }
         ],
         "parent": "1"
     },
     "6": {
-        "label": "Qui a financ\u00e9 vos recherches? (source principale de financement)",
+        "label": "Who funded your research? (main source of funding)",
         "options": [
             {
                 "option": "H2020",
@@ -98,316 +98,316 @@
         "parent": "0"
     },
     "7": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
                 "option": "Article",
                 "value": "8"
             },
             {
-                "option": "Livre, monographie, actes de conf\u00e9rence, litt\u00e9rature grise",
+                "option": "Book, monograph, conference proceedings, grey literature",
                 "value": "Fiche E21A"
             }
         ],
         "parent": "6"
     },
     "8": {
-        "label": "Votre article est ou sera :",
+        "label": "Your article is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "9"
             },
             {
-                "option": "Difus\u00e9 uniquement via un acc\u00e8s par abonnement en ligne/papier",
+                "option": "Available only via online/paper subscription access",
                 "value": "10"
             }
         ],
         "parent": "7"
     },
     "9": {
-        "label": "Est-ce que votre publication est diffus\u00e9e depuis une archive ouverte (Ex. archive ouverte institutionnelle, PubMed Central, Zenodo, archive ouverte disciplinaire\u2026) ?",
+        "label": "Is your publication deposited and being shared in an open archive (e.g. institutional repository, PubMed Central, Zenodo, disciplinary repository...)?",
         "options": [
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche E2111A"
             },
             {
-                "option": "Non",
+                "option": "No",
                 "value": "Fiche E2111B"
             }
         ],
         "parent": "8"
     },
     "10": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche E2112A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "11"
             }
         ],
         "parent": "8"
     },
     "11": {
-        "label": "Est-ce que votre publication est diffus\u00e9e depuis une archive ouverte (Ex. archive ouverte institutionnelle, PubMed Central, Zenodo, archive ouverte disciplinaire\u2026) ?",
+        "label": "Is your publication deposited and being shared in an open archive (e.g. institutional repository, PubMed Central, Zenodo, disciplinary repository...)?",
         "options": [
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche E21122A"
             },
             {
-                "option": "Non",
+                "option": "No",
                 "value": "Fiche E21122B"
             }
         ],
         "parent": "10"
     },
     "12": {
-        "label": "Ce projet a officiellement d\u00e9marr\u00e9",
+        "label": "This project officially started",
         "options": [
             {
-                "option": "Apr\u00e8s le 1er avril 2018",
+                "option": "After April 1,2018",
                 "value": "13"
             },
             {
-                "option": "Avant le 1er avril 2018",
+                "option": "Before April 1,2018",
                 "value": "19"
             }
         ],
         "parent": "6"
     },
     "13": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
                 "option": "Article",
                 "value": "14"
             },
             {
-                "option": "Chapitre de livre",
+                "option": "Book chapter",
                 "value": "17"
             },
             {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
+                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "Fiche S221A"
             }
         ],
         "parent": "12"
     },
     "14": {
-        "label": "Votre article est ou sera :",
+        "label": "Your article is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9 en Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "15"
             },
             {
-                "option": "Difus\u00e9 uniquement via un acc\u00e8s par abonnement en ligne/papier",
+                "option": "Available only via online/paper subscription access",
                 "value": "16"
             }
         ],
         "parent": "13"
     },
     "15": {
-        "label": "Quel est le type de revue o\u00f9 votre article appara\u00eetra ?",
+        "label": "What is the type of journal where your article will appear?",
         "options": [
             {
-                "option": "Revue Open Access (Gold Open Access - tous les articles de la revue sont disponibles en Open Access)",
+                "option": "Open Access Journal (Gold Open Access - all articles are available in Open Access)",
                 "value": "Fiche S22111A"
             },
             {
-                "option": "Revue \u00e0 souscription qui vous a offert de publier votre article en Open Access moyennant le payement d'APC (hybride - o\u00f9 des articles en Open Access et des articles \u00e0 acc\u00e8s payant coexistent)",
+                "option": "Subscription journal that offered you to publish your article in Open Access in return for payment of APC (hybrid - where Open Access articles and paid access articles coexist)",
                 "value": "Fiche S22111B"
             }
         ],
         "parent": "14"
     },
     "16": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche S22112A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche S22112B"
             }
         ],
         "parent": "14"
     },
     "17": {
-        "label": "Votre chapitre est ou sera :",
+        "label": "Your chapter is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "Fiche S2212A"
             },
             {
-                "option": "Diffus\u00e9 uniquement via un acc\u00e8s payant",
+                "option": "Distributed only via paid access",
                 "value": "18"
             }
         ],
         "parent": "13"
     },
     "18": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche S22122A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche S22122B"
             }
         ],
         "parent": "17"
     },
     "19": {
-        "label": "Votre publication a \u00e9t\u00e9 publi\u00e9e",
+        "label": "Your publication was published",
         "options": [
             {
-                "option": "Apr\u00e8s le 1er avril 2018",
+                "option": "After April 1,2018",
                 "value": "20"
             },
             {
-                "option": "Avant le 1er avril 2018",
+                "option": "Before April 1,2018",
                 "value": "27"
             }
         ],
         "parent": "12"
     },
     "20": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
                 "option": "Article",
                 "value": "21"
             },
             {
-                "option": "Chapitre de livre",
+                "option": "Book chapter",
                 "value": "24"
             },
             {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
+                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "26"
             }
         ],
         "parent": "19"
     },
     "21": {
-        "label": "Votre article est ou sera :",
+        "label": "Your article is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9 en Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "22"
             },
             {
-                "option": "Difus\u00e9e uniquement via un acc\u00e8s par abonnement en ligne/papier",
+                "option": "Available only via online/paper subscription access",
                 "value": "23"
             }
         ],
         "parent": "20"
     },
     "22": {
-        "label": "Quel est le type de revue o\u00f9 votre article appara\u00eetra ?",
+        "label": "What is the type of journal where your article will appear?",
         "options": [
             {
-                "option": "Revue Open Access (Gold Open Access - tous les articles de la revue sont disponibles en Open Access)",
+                "option": "Open Access Journal (Gold Open Access - all articles are available in Open Access)",
                 "value": "Fiche S222111A"
             },
             {
-                "option": "Revue \u00e0 souscription qui vous a offert de publier votre article en Open Access moyennant le payement d'APC (hybride - o\u00f9 des articles en Open Access et des articles \u00e0 acc\u00e8s payant coexistent)",
+                "option": "Subscription journal that offered you to publish your article in Open Access in return for payment of APC (hybrid - where Open Access articles and paid access articles coexist)",
                 "value": "Fiche S222111B"
             }
         ],
         "parent": "21"
     },
     "23": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche S222112A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche S222112B"
             }
         ],
         "parent": "21"
     },
     "24": {
-        "label": "Votre chapitre est ou sera :",
+        "label": "Your chapter is or will be",
         "options": [
             {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "Fiche S22212A"
             },
             {
-                "option": "Diffus\u00e9 uniquement via un acc\u00e8s payant",
+                "option": "Distributed only via paid access",
                 "value": "25"
             }
         ],
         "parent": "20"
     },
     "25": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Not yet",
                 "value": "Fiche S222122A"
             },
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche S222122B"
             }
         ],
         "parent": "24"
     },
     "26": {
-        "label": "Des ressources allou\u00e9es vous ont \u00e9t\u00e9 accord\u00e9es au titre de frais imputables?",
+        "label": "Have you been granted resources for publication costs?",
         "options": [
             {
-                "option": "Oui",
+                "option": "Yes",
                 "value": "Fiche S22213A"
             },
             {
-                "option": "Non",
+                "option": "No",
                 "value": "Fiche S22213B"
             }
         ],
         "parent": "20"
     },
     "27": {
-        "label": "Quel est le format de votre publication?",
+        "label": "What is the format of your publication?",
         "options": [
             {
                 "option": "Article",
                 "value": "28"
             },
             {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
+                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "Fiche S2222A"
             }
         ],
         "parent": "19"
     },
     "28": {
-        "label": "Votre article a \u00e9t\u00e9 :",
+        "label": "Your article was",
         "options": [
             {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
+                "option": "Published in Gold Open Access under a Creative Commons license",
                 "value": "Fiche S22221A"
             },
             {
-                "option": "Difus\u00e9 uniquement via un acc\u00e8s par abonnement en ligne/papier",
+                "option": "Available only via online/paper subscription access",
                 "value": "Fiche S22221B"
             }
         ],
