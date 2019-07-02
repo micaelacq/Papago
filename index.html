@@ -47,7 +47,7 @@ function format(item) {
     parent = oldItem;
     item.replace("Fiche", translate[lang]["Fiche"]);
     url = item.split(' ');
-    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang.toUpperCase()+ "/" + url[1] + "_Papago_" + lang.toUpperCase() + ".pdf" + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
+    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang.toUpperCase()+ "/" + url[1] + "_Papago_" + lang.toUpperCase() + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
     $('#submit').hide();
     $('#restart').show();
   }
