@@ -9,6 +9,7 @@ i = 0
 
 def loadfile():
   filename = ''
+  zip_ref = False
   if (len(sys.argv) > 1):
     file = sys.argv[1]
   else:
@@ -52,7 +53,7 @@ def papagoParse(topic, parent):
         papagoParse(grandChild, id)
     
       obj['options'].append(option)
-  if parent:
+  if parent > -1:
     obj['parent'] = str(parent)
   papago[id] = obj
       
@@ -61,7 +62,7 @@ if loadfile():
     tree = ET.parse('content.xml')
     root = tree.getroot()
     try:
-      papagoParse(root[0][0], 0)
+      papagoParse(root[0][0], -1)
       try:
         with open('papago.json', 'w') as json_file:
           json.dump(papago, json_file, indent=4, sort_keys=True)
