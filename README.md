@@ -40,6 +40,7 @@ For different languages, you can add a language paramater. The following languag
 - https://micaelacq.github.io/Papago/?lang=fr (French: default)
 - https://micaelacq.github.io/Papago/?lang=de (German)
 - https://micaelacq.github.io/Papago/?lang=en (English)
+- https://micaelacq.github.io/Papago/?lang=it (Italian)
 
 It is possible to integrate the standalone GitHub page with an iframe into your website:
 ```html
