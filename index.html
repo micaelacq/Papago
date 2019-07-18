@@ -15,7 +15,7 @@ var lang = "fr";
 //URL for Papago content tree
 var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
 //URL for information pdf sheets (including trailing slash)
-var pdfUrl = "https://www.unil.ch/openscience/files/live/sites/openscience/files/Open%20Access/PAPAGO/";
+var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdf/";
 //suffix for pdf sheets (including ".")
 var pdfSuffix = ".pdf";
 // *** parameters end **
@@ -46,7 +46,7 @@ function format(item) {
     parent = oldItem;
     item.replace("Fiche", translate[lang]["Fiche"]);
     url = item.split(' ');
-    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang.toUpperCase()+ "/" + url[1] + "_Papago_" + lang.toUpperCase() + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
+    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang + "/" + url[1] + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
     $('#submit').hide();
     $('#restart').show();
   }
