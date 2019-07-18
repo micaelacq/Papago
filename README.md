@@ -51,8 +51,6 @@ To integrate Papago directly into your webpage, go to [index.html](index.html) a
 
 Papago uses [_jQuery_](https://jquery.com/), [_Bootstrap 4_](https://getbootstrap.com/) and [_Font Awsome 4_](https://fontawesome.com/v4.7.0/). Make sure that this resources are integrated into the header section of your page.
 
-If your site uses _Bootstrap 3_ you can set the parameter _bootstrap3_ to `true`.
-
 There are other parameters you can change in the paremeter section :
 - lang: language of Papago
 - papagoUrl: URL of the Papago decision tree, directs to the [trees](trees) directory.
