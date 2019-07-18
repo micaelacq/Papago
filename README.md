@@ -32,6 +32,9 @@ The flowchart can be broken down into 2 phases (these two phases are transparent
 - Phase 1 focuses on the source of funding and includes at least 2 questions regardless of the answer to the first question. The sponsor must indicate whether its publication has been publicly funded. If so, it must indicate the origin of this funding. If the respondent's publication is the result of an H2020 research project, he or she must indicate whether the project began before or after January 1, 2017. If his publication is not the result of a project that has been specifically funded, he must indicate whether at least half of his salary comes from public funds.
 - Phase 2 is about publication: the respondent must indicate whether the publication is distributed under a Creative Commons license or on a paid basis. If the respondent's publication is from an H2020 research project, he or she must indicate whether the publication is already being distributed from an open archive. This makes it possible to know if they must take additional steps to meet their obligations.
 
+## Multilingual support
+The client and building blocks (bricks) of Papago are currently being translated. Full DE, EN and IT versions will be available soon.
+
 ## Use Cases
 ### Standalone GitHub Page
 Just go to https://micaelacq.github.io/Papago and you can use Papago out of the box.
