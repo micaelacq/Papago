@@ -22,7 +22,7 @@ In view of the multilingual situation in Switzerland, as well as this project, a
 Papago is composed of 2 complementary parts:
 
 - A form that provides customized scenarios based on the answers to the questions with a final summary of the respondent's situation.
-- Personalised sheets in PDF format, accessible by a link at the end of the form, which make it possible to detail the guarantor's situation and his or her rights, obligations and financing opportunities. These files are hosted on the servers of the University of Lausanne.
+- Personalised sheets in PDF format, accessible by a link at the end of the form, which make it possible to detail the guarantor's situation and his or her rights, obligations and financing opportunities. These sheets are generated dynamically by clicking the link thanks to applications hosted at the University of Fribourg. The dynamic generation of the sheets from smaller building blocks (bricks) facilitates multilingual support, corrections and institutional personnalisation. 
 
 Papago seeks to bring together in one place all the essential information on the rights and obligations of researchers with regard to the open access distribution of their publications. Based on the answers provided by the respondents, it makes it possible to build a personalized scenario, adapted to the researcher's situation.
 
