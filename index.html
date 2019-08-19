@@ -54,7 +54,7 @@ function format(item) {
   $('#restart').hide();
     code = '<p>' + papago[item]['label'] + '</p><div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
     $.each(papago[item]['options'], function(index,value) {
-      code = code+'<a class="list-group-item list-group-item-action btn" style="text-align:left" href="javascript:format(\'' + value['value'] +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + value['option'] + '</a>';
+      code = code+'<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + value['value'] +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + value['option'] + '</a>';
     });
     code = code + '</div>';
       if (papago[item]['parent']) {
@@ -115,8 +115,8 @@ $(document).ready(function(){
   <div id="question" style="margin-bottom: 1rem">
   </div>
   <div id="buttons" style="display:none">
-    <a id="back" href="javascript:goback();" class="btn btn-secondary btn-default" style="display:none"><i class="fa fa-chevron-left"></i>&nbsp;back</a>
-    <a id="restart" href="javascript:location.reload()" class="btn btn-secondary btn-default" style="display:none"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;restart</a>
+    <a id="back" href="javascript:goback();" class="btn btn-secondary btn-default" style="display:none; text-decoration:none"><i class="fa fa-chevron-left"></i>&nbsp;back</a>
+    <a id="restart" href="javascript:location.reload()" class="btn btn-secondary btn-default" style="display:none; text-decoration:none"><i class="fa fa-arrow-circle-o-left"></i>&nbsp;restart</a>
   </div>
 </div>
 </body>
