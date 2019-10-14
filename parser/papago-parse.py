@@ -70,7 +70,7 @@ if loadfile():
       except:
         print('json file could not be written!')
     except:
-      print:('parsing error')
+      print('parsing error')
   except:
     print('xml error!')
 
