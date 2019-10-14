@@ -22,7 +22,9 @@ In view of the multilingual situation in Switzerland, as well as this project, a
 Papago is composed of 2 complementary parts:
 
 - A form that provides customized scenarios based on the answers to the questions with a final summary of the respondent's situation.
-- Personalised sheets in PDF format, accessible by a link at the end of the form, which make it possible to detail the guarantor's situation and his or her rights, obligations and financing opportunities. These sheets are generated dynamically by clicking the link thanks to applications hosted at the University of Fribourg. The dynamic generation of the sheets from smaller building blocks (bricks) facilitates multilingual support, corrections and institutional personnalisation. 
+- Personalised sheets in PDF format, accessible by a link at the end of the form, which make it possible to detail the guarantor's situation and his or her rights, obligations and financing opportunities. These sheets are generated dynamically by clicking the link thanks to applications hosted at the University of Fribourg. The dynamic generation of the sheets from smaller building blocks (bricks) facilitates multilingual support, corrections and institutional personnalisation.
+
+Papago also uses SHERPA/RoMEO (http://sherpa.ac.uk/romeo/index.php), an online resource that aggregates and analyses publisher open access policies from around the world and provides summaries of self-archiving permissions and conditions of rights given to authors on a journal-by-journal basis, to further personalise the answer sheets depending on the Journal and its required embargo period.
 
 Papago seeks to bring together in one place all the essential information on the rights and obligations of researchers with regard to the open access distribution of their publications. Based on the answers provided by the respondents, it makes it possible to build a personalized scenario, adapted to the researcher's situation.
 
@@ -33,7 +35,7 @@ The flowchart can be broken down into 2 phases (these two phases are transparent
 - Phase 2 is about publication: the respondent must indicate whether the publication is distributed under a Creative Commons license or on a paid basis. If the respondent's publication is from an H2020 research project, he or she must indicate whether the publication is already being distributed from an open archive. This makes it possible to know if they must take additional steps to meet their obligations.
 
 ## Multilingual support
-The client and building blocks (bricks) of Papago are currently being translated. Full DE, EN and IT versions will be available soon.
+The client and building blocks (bricks) of Papago are fully available in FR, DE, EN and IT.
 
 ## Use Cases
 ### Standalone GitHub Page
