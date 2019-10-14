@@ -18,43 +18,73 @@ var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees
 var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdf/";
 //suffix for pdf sheets (including ".")
 var pdfSuffix = ".pdf";
-//institution (for institutional personalization, with beginning underscore)
+//default institution (for institutional personalization, with preceeding underscore)
 var inst = '';
 // *** parameters end **
 
+var sherpa = ["1111A", "1111B", "12A", "S22112A", "S22112B", "S222112A", "S222112B", "S22221Bs", "S22221Bb", "E2112As", "E2112Ah", "E21122As", "E21122Ah", "E21122Bs", "E21122Bh"];
 
 var translate = {
     "fr" : {
       "Fiche": "Fiche",
       "text" : "La fiche ci-dessous vous fournira des conseils sur les possibilit\u00e9s de financement ainsi que sur vos droits et obligations concernant cette publication.",
-      "error" : "Papago n\'est pas accessible pour le moment."},
+      "error" : "Papago n\'est pas accessible pour le moment.",
+      "jSearch" : "Dans quelle revue, votre article est ou a été publié ?",
+      "jTitle" : "Titre de la revue",
+      "jDefault" : "Revue pas trouvé"},
     "de" : {
       "Fiche": "Infoblatt",
       "text" : "Folgendes Infoblatt enthält Ratschläge zu Finanzierungsmöglichkeiten sowie zu Ihren Rechten und Pflichten in Bezug auf diese Publikation.",
-      "error" : "Papago ist zur Zeit nicht erreichbar."},
+      "error" : "Papago ist zur Zeit nicht erreichbar.",
+      "jSearch" : "In welcher Zeitschrift wird oder wurde der Artikel veröffentlicht?",
+      "jTitle" : "Titel der Zeitschrift",
+      "jDefault" : "Zeitschrift nicht gefunden"},
     "en" : {
       "Fiche": "Information Sheet",
       "text" : "The following factsheet contains further advice on financing options and on your rights and obligations in relation to this publication.",
-      "error" : "Papago is not available at the moment."},
+      "error" : "Papago is not available at the moment.",
+      "jSearch" : "In which journal was or will be published your article?",
+      "jTitle" : "Journal title",
+      "jDefault" : "Journal not found"},
     "it" : {
       "Fiche": "Scheda Informativa",
       "text" : "La seguente scheda informativa contiene ulteriori consigli sulle possibilità di finanziamento e sui diritti e obblighi relativi a questa pubblicazione.",
-      "error" : "Papago non è disponibile per il momento."},
+      "error" : "Papago non è disponibile per il momento.",
+      "jSearch" : "In quale rivista sarà pubblicato o è stato pubblicato l'articolo",
+      "jTitle" : "Titolo della rivista",
+      "jDefault" : "Rivista non trovata"},
 }
-
-var parent = oldItem = "";
+var parent = oldItem = sheet = jList = "";
 
 function format(item) {
   if (item.substr(0,5) == 'Fiche') {
     parent = oldItem;
     item.replace("Fiche", translate[lang]["Fiche"]);
     url = item.split(' ');
-    code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang + "/" + url[1] + inst + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
+    if ($.inArray(item.substr(6), sherpa) != -1 && item.indexOf(':') == -1) {
+      code = '<p>' + translate[lang]['jSearch'] + '</p><form class="form-inline" id="jForm"><input type="text" id="jsearch" name="jsearch" class="form-control" placeholder="' + translate[lang]['jTitle'] + '">&nbsp;<button id="sherpa" class="btn btn-success" style="padding:10px"><i class="fa fa-search"></i></button></form>';
+      sheet = item;
+      if (jList) {
+        code = code + jList;
+      }
+    }
+    else {
+      parts = item.split(':');
+      if (parts.length > 1) {
+        if (parts[1] == '') {
+          item = parts[0];
+          url[1] = url[1].substr(0, url[1].length-1);
+        }
+        parent = parts[0];
+      }
+      code = '<p>' + translate[lang]['text'] + '</p><a class="btn btn-success btn-lg" target="_blank" href="' + pdfUrl + lang + "/" + url[1] + inst + pdfSuffix + '"><i class="fa fa-download"></i>&nbsp;' + item + '</a></p>';
+    }
     $('#submit').hide();
     $('#restart').show();
   }
   else {
-  $('#restart').hide();
+    jList = '';
+    $('#restart').hide();
     code = '<p>' + papago[item]['label'] + '</p><div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
     $.each(papago[item]['options'], function(index,value) {
       code = code+'<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + value['value'] +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + value['option'] + '</a>';
@@ -71,7 +101,6 @@ function format(item) {
   }
   $('#question').html(code);
 }
-
 function reformat (){
  value = $("input[name='option']:checked").val();
  if(value) {
@@ -82,9 +111,7 @@ function reformat (){
  }
  return false;
 }
-
 function goback() {
-
 	format(parent);
 }
  
@@ -104,16 +131,51 @@ $(document).ready(function(){
   if(param['inst']) {
     inst = '_' + param['inst'];
   }
+  if(param['notitle'] && param['notitle']=='true') {
+    $('h1').hide();
+  }
   $.getJSON( papagoUrl + "papago-" + lang + ".json")
     .done(function( data ) {
       papago = data;
       $('#buttons').show();
       format("0");
     })
+
     .fail(function(xhr, status, error) {
       $('form').html(translate[lang]['error']);
       console.log( error );
     });
+  $('#question').on('click', '#sherpa', function() {
+    jTitle = $('#jsearch').val();
+    if (jTitle != '') {
+      var jxhr = $.get('https://www.sherpa.ac.uk/romeo/api29.php?&ak=kG8JXwztmsk&qtype=contains&jtitle=' + jTitle, function(data) {
+        pattern = new RegExp(jTitle, 'gi');
+        jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
+        journals = data.getElementsByTagName('journal');
+        if (typeof journals[0] !== 'undefined') {
+          $.each( journals, function(index, journal){
+            issn = journal.children[1].innerHTML;
+            if (issn) {
+              title = journal.children[0].innerHTML;
+              match = title.match(pattern);
+              if (match) {
+                title = title.replace(match[0], '<b>' + match +'</b>');
+              }
+              jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
+            }
+          });
+        }
+        jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
+        $('div.list-group').remove();
+        $('#question').append(jList);
+      })
+      .fail(function(){
+       format(sheet + ':');
+      });
+      
+    }
+    return false;
+  });
 });
 </script>
 <div style="margin: 1rem">
