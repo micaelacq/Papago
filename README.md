@@ -53,7 +53,7 @@ It is possible to integrate the standalone GitHub page with an iframe into your 
 ```
 ### Institutional customization (for Swiss HEIs)
 For institutional customization there are two further parameters:
-- inst: institutional code. To register your institutional code and provid additional instituional informatation go to https://www3.unifr.ch/apps/bcu/papago/custom (for Swiss HEIs only).
+- inst: institutional code. To register your institutional code and provid additional instituional information go to https://www3.unifr.ch/apps/bcu/papago/custom (for Swiss HEIs only).
 - notitle: if set to true, title is not displayed (helpful for integration with iframe).
 
 Example with all parameters (french version, with customization for the University of Fribourg, without title):
