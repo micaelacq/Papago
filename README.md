@@ -63,13 +63,12 @@ https://micaelacq.github.io/Papago/?lang=fr&inst=unifr&notitle=true
 ## Integrate Papago directly into your webpage
 To integrate Papago directly into your webpage, go to [index.html](index.html) and copy all code up from the `<script>` tag into your own page.
 
-Papago uses [_jQuery_](https://jquery.com/), [_Bootstrap 4_](https://getbootstrap.com/) and [_Font Awsome 4_](https://fontawesome.com/v4.7.0/). Make sure that this resources are integrated into the header section of your page.
+Papago uses [_jQuery_](https://jquery.com/), [_Bootstrap 4_](https://getbootstrap.com/) and [_Font Awsome 4_](https://fontawesome.com/v4.7.0/). Make sure that this resources are integrated into the header section of your page. Papago works also with _Bootstrap 3_.
 
 There are other parameters you can change in the paremeter section :
 - lang: language of Papago
 - papagoUrl: URL of the Papago decision tree, directs to the [trees](trees) directory.
 - pdfUrl: URL of the PDF directory. In this way you can integrate your own PDFs.
 - pdfSuffix: Suffix of your PDF files (including "."), e.g. ".pdf".
-- bootstrap3: set to `true` if you are using _Bootstrap 3_
 
 To change the title or spacing you can work on the html code at the bottom of the document (after the `</script>` tag).
