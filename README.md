@@ -1,7 +1,9 @@
 # Papago
 The assistant who gives you personalised advice on your rights, obligations and funding opportunities regarding Open Access publishing in Switzerland
 
-## General information
+1. [ General information ] (#General-Information)
+
+## 1. General information
 The concept, logic tree and original answer sheets in French were developed by Micaela Crespo from the Department of Research and International Relations of the University of Lausanne.
 The source code for this tool was developed by Thomas Henkel of the Cantonal and University Library of Friboug. It can be reused, modified, built upon and improved freely, but we ask that the authorship of the code be attributed to the Papago project.
 
@@ -51,7 +53,7 @@ It is possible to integrate the standalone GitHub page with an iframe into your 
 ```html
 <iframe src="https://micaelacq.github.io/Papago"></iframe>
 ```
-## Institutional customization (for Swiss HEIs)
+### Institutional customization (for Swiss HEIs)
 For institutional customization there are two further parameters:
 - inst: institutional code. To register your institutional code and provide additional instituional information go to https://www3.unifr.ch/apps/bcu/papago/custom (for Swiss HEIs only).
 - notitle: if set to true, title is not displayed (helpful for integration with iframe).
@@ -60,7 +62,7 @@ Example with all parameters (french version, with customization for the Universi
 
 https://micaelacq.github.io/Papago/?lang=fr&inst=unifr&notitle=true
 
-## Integrate Papago directly into your webpage
+### Integrate Papago directly into your webpage
 To integrate Papago directly into your webpage, go to [index.html](index.html) and copy all code up from the `<script>` tag into your own page.
 
 Papago uses [_jQuery_](https://jquery.com/), [_Bootstrap 4_](https://getbootstrap.com/) and [_Font Awsome 4_](https://fontawesome.com/v4.7.0/). Make sure that this resources are integrated into the header section of your page. Papago works also with _Bootstrap 3_.
