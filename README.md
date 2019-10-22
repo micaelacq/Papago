@@ -7,7 +7,6 @@ The assistant who gives you personalised advice on your rights, obligations and 
    * [Structure](#structure)
    * [Logic tree (flowchart)](#logic-tree-flowchart)
    * [Multilingual support](#multilingual-support)
-  
 4. [Use Cases](#4-use-cases)
    * [Standalone GitHub Page](#standalone-github-page)
    * [Institutional customization (for Swiss HEIs)](#institutional-customization-for-swiss-heis)
