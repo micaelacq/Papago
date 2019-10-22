@@ -1,18 +1,16 @@
 # Papago
 The assistant who gives you personalised advice on your rights, obligations and funding opportunities regarding Open Access publishing in Switzerland
 
-- [1. General information](#1-general-information)
-- [2. Collaborators](#2-collaborators)
-- [3. Description](#3-description)
-  * [Structure](#structure)
-  * [Logic tree (flowchart)](#logic-tree--flowchart-)
-  * [Multilingual support](#multilingual-support)
-- [4. Use Cases](#4-use-cases)
-  * [Standalone GitHub Page](#standalone-github-page)
-  * [Institutional customization (for Swiss HEIs)](#institutional-customization--for-swiss-heis-)
-  * [Integrate Papago directly into your webpage](#integrate-papago-directly-into-your-webpage)
-
-1. [General information]
+1. [General information](#1-general-information)
+2. [Collaborators](#2-collaborators)
+3. [Description](#3-description)
+  - [Structure](#structure)
+  - [Logic tree (flowchart)](#logic-tree-flowchart)
+  - [Multilingual support](#multilingual-support)
+4. [Use Cases](#4-use-cases)
+  - [Standalone GitHub Page](#standalone-github-page)
+  - [Institutional customization (for Swiss HEIs)](#institutional-customization-for-swiss-heis)
+  - [Integrate Papago directly into your webpage](#integrate-papago-directly-into-your-webpage)
 
 ## 1. General information
 The concept, logic tree and original answer sheets in French were developed by Micaela Crespo from the Department of Research and International Relations of the University of Lausanne.
