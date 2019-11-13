@@ -312,14 +312,14 @@
         "parent": "20"
     }, 
     "22": {
-        "label": "Votre publication a \u00e9t\u00e9 publi\u00e9e", 
+        "label": "Ihre Publikation wurde...", 
         "options": [
             {
-                "option": "Nach dem 1. April 2018", 
+                "option": "...nach dem 1. April 2018 veröffentlicht.", 
                 "value": "23"
             }, 
             {
-                "option": "Vorm dem 1. April 2018", 
+                "option": "...vor dem 1. April 2018 veröffentlicht.", 
                 "value": "30"
             }
         ], 
