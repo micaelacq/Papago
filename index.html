@@ -8,18 +8,18 @@
 </head>
 <body>
 <script>
-
 // *** parameters start ***
 //default language
 var lang = "fr";
 //URL for Papago content tree
-var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
+//var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
+var papagoUrl = "";
 //URL for information pdf sheets (including trailing slash)
-var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdf/";
+var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdftest/";
 //suffix for pdf sheets (including ".")
-var pdfSuffix = ".pdf";
+var pdfSuffix = ".pdf?nostats";
 //default institution (for institutional personalization, with preceeding underscore)
-var inst = '';
+var inst = '_unil';
 // *** parameters end **
 
 var sherpa = ["1111A", "1111B", "12A", "S22112A", "S22112B", "S222112A", "S222112B", "S22221Bs", "S22221Bb", "E2112As", "E2112Ah", "E21122As", "E21122Ah", "E21122Bs", "E21122Bh"];
@@ -148,15 +148,21 @@ $(document).ready(function(){
   $('#question').on('click', '#sherpa', function() {
     jTitle = $('#jsearch').val();
     if (jTitle != '') {
-      var jxhr = $.get('https://www.sherpa.ac.uk/romeo/api29.php?&ak=kG8JXwztmsk&qtype=contains&jtitle=' + jTitle, function(data) {
+      $.ajax({
+        type: "GET",
+        
+    crossDomain: true,
+        url:'https://v2.sherpa.ac.uk/cgi/retrieve?item-type=publication&api-key=FF5C7B90-1032-11EA-9359-7FE62A6A9D3C&format=Json&filter=[["title","contains word","' + jTitle + '*"]]'})
+      .done(function(data) {
         pattern = new RegExp(jTitle, 'gi');
         jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
-        journals = data.getElementsByTagName('journal');
-        if (typeof journals[0] !== 'undefined') {
+        journals = data.items;
+        if (journals.length > 0) {
           $.each( journals, function(index, journal){
-            issn = journal.children[1].innerHTML;
+            console.log(journal);
+            issn = journal['issns'][0]['issn'];
             if (issn) {
-              title = journal.children[0].innerHTML;
+              title = journal['title'][0]['title'];
               match = title.match(pattern);
               if (match) {
                 title = title.replace(match[0], '<b>' + match +'</b>');
