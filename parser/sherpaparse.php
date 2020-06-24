@@ -1,8 +1,8 @@
 <?php
 /*
-* this is a (lightly) simplified version of the sherpaParse function used by Papago for the information sheet production.
+* this is a (slightly) simplified version of the sherpaParse function used by Papago for the information sheet production.
 * It needs the ISSN available on SHERPA/RoMEO as the only parameter.
-* You need an API key (cf. line 13) for using the SHERPA/RoMEO API. You can register for a key on the following page: https://v2.sherpa.ac.uk/api/
+* You need an API key (cf. line 14) for using the SHERPA/RoMEO API. You can register for a key on the following page: https://v2.sherpa.ac.uk/api/
 */
 
 //example:
