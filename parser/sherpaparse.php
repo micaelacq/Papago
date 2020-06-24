@@ -2,14 +2,16 @@
 /*
 * this is a (lightly) simplified version of the sherpaParse function used by Papago for the information sheet production.
 * It needs the ISSN available on SHERPA/RoMEO as the only parameter.
+* You need an API key (cf. line 13) for using the SHERPA/RoMEO API. You can register for a key on the following page: https://v2.sherpa.ac.uk/api/
 */
+
 //example:
 $result = sherpaParse('0018-2613');
 var_dump($result);
 
 
 function sherpaParse($issn) {
-  $sherpa = array('url' => 'https://v2.sherpa.ac.uk/', 'apipath' => 'cgi/retrieve', 'key' => 'FF5C7B90-1032-11EA-9359-7FE62A6A9D3C');
+  $sherpa = array('url' => 'https://v2.sherpa.ac.uk/', 'apipath' => 'cgi/retrieve', 'key' => '*** SHERPA/RoMEO API KEY ***');
   $journal = array(
     'title' => '',
     'url' => '',
