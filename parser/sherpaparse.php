@@ -15,13 +15,13 @@ function sherpaParse($issn) {
   $journal = array(
     'title' => '',
     'url' => '',
-    'postprint' => array(
+    'postprint' => array(  //information concerning accepted manuscript
       'authorization' => 'unknown',
       'embargo' => array(
         'num' => '',
         'type' => '')
       ),
-    'pdf' => array(
+    'pdf' => array(  //information concerning publisher's version
       'authorization' => 'unknown',
       'embargo' => array(
         'num' => '',
