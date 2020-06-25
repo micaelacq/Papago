@@ -11,17 +11,17 @@ var_dump($result);
 
 
 function sherpaParse($issn) {
-  $sherpa = array('url' => 'https://v2.sherpa.ac.uk/', 'apipath' => 'cgi/retrieve', 'key' => '*** SHERPA/RoMEO API KEY ***');
+  $sherpa = array('url' => 'https://v2.sherpa.ac.uk/', 'apipath' => 'cgi/retrieve', 'key' => 'FF5C7B90-1032-11EA-9359-7FE62A6A9D3C');
   $journal = array(
     'title' => '',
     'url' => '',
-    'postprint' => array(  //information concerning accepted manuscript
+    'postprint' => array(
       'authorization' => 'unknown',
       'embargo' => array(
         'num' => '',
         'type' => '')
       ),
-    'pdf' => array(  //information concerning publisher's version
+    'pdf' => array(
       'authorization' => 'unknown',
       'embargo' => array(
         'num' => '',
@@ -29,8 +29,9 @@ function sherpaParse($issn) {
       ),
     'conditions' => false
   );
-  $url = $sherpa['url'] . $sherpa['apipath'] . '?item-type=publication&api-key=' . $sherpa['key'] . '&format=Json&filter=[["issn","equals", "' . $issn . '"]]';
+  $url = $sherpa['url'] . $sherpa['apipath'] . '?item-type=publication&api-key=' . $sherpa['key'] . '&format=Json&filter=[["issn","equals","' . $issn . '"]]';
   $url = preg_replace("/ /", "%20", $url);
+  $journal['api'] = $url;
   $res = file_get_contents($url);
   $json = json_decode($res);
   $versions = array('accepted' => 'postprint', 'published' => 'pdf');
@@ -38,7 +39,7 @@ function sherpaParse($issn) {
     $journal['title'] = $json->items[0]->title[0]->title;
     $journal['url'] = $json->items[0]->system_metadata->uri;
     foreach($json->items[0]->publisher_policy as $policy) {
-      if(isset($policy->permitted_oa)) {
+      if(isset($policy->permitted_oa) && $policy->internal_moniker == 'Default Policy') {
       foreach($policy->permitted_oa as $idx => $permitted) {
         if ($permitted->additional_oa_fee == 'no') { //Green OA possible
           $repository = false;
@@ -63,8 +64,16 @@ function sherpaParse($issn) {
                 }
               
                 if (isset($permitted->embargo)) {
-                  $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
-                  $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
+                  if ($journal[$versions[$version]]['embargo']['num']) {
+                    if ($permitted->embargo->amount < $journal[$versions[$version]]['embargo']['num']) {
+                      $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
+                      $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
+                    } 
+                  }
+                  else {
+                    $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
+                    $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
+                  }
                 }
               }
               else {
@@ -94,6 +103,7 @@ function sherpaParse($issn) {
   }
   return $journal;
 }
+
 
 
 ?>
