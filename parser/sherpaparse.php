@@ -39,50 +39,52 @@ function sherpaParse($issn) {
     $journal['title'] = $json->items[0]->title[0]->title;
     $journal['url'] = $json->items[0]->system_metadata->uri;
     foreach($json->items[0]->publisher_policy as $policy) {
-      if(isset($policy->permitted_oa) && ($policy->internal_moniker == 'Default Policy' || substr($policy->internal_moniker, 0, 16) == 'Creative Commons')) {
+      if(isset($policy->permitted_oa)) {//} && !isset($policy->($policy->internal_moniker == 'Default Policy' || substr($policy->internal_moniker, 0, 16) == 'Creative Commons')) {
         foreach($policy->permitted_oa as $idx => $permitted) {
-          if ($permitted->additional_oa_fee == 'no') { //Green OA possible
-            $repository = false;
-            foreach($permitted->location->location as $location) {
-              if (stripos($location, 'repository') !==false || stripos($location, 'any_website') !==false) {
-                $repository = true;
-              }
-            };
-            if (isset($permitted->article_version)) {
-              foreach($permitted->article_version as $version) {
-                if (array_key_exists($version, $versions)) {
-                  if($repository) {
-                    $journal[$versions[$version]]['authorization'] = 'can';
-                    if ($version == 'accepted' && $journal['pdf']['authorization'] == 'unknown') {
-                      $journal['pdf']['authorization'] = 'cannot';
-                    }
-                    elseif($version == 'published' && $journal['postprint']['authorization'] == 'unknown') {
-                      $journal['postprint']['authorization'] = 'cannot';
-                    }
-                  
-                    if (isset($permitted->embargo)) {
-                      if ($journal[$versions[$version]]['embargo']['num']) {
-                        if ($permitted->embargo->amount < $journal[$versions[$version]]['embargo']['num']) {
+          if (!isset($premitted->prerequisites)) {
+            if ($permitted->additional_oa_fee == 'no') { //Green OA possible
+              $repository = false;
+              foreach($permitted->location->location as $location) {
+                if (stripos($location, 'repository') !==false || stripos($location, 'any_website') !==false) {
+                  $repository = true;
+                }
+              };
+              if (isset($permitted->article_version)) {
+                foreach($permitted->article_version as $version) {
+                  if (array_key_exists($version, $versions)) {
+                    if($repository) {
+                      $journal[$versions[$version]]['authorization'] = 'can';
+                      if ($version == 'accepted' && $journal['pdf']['authorization'] == 'unknown') {
+                        $journal['pdf']['authorization'] = 'cannot';
+                      }
+                      elseif($version == 'published' && $journal['postprint']['authorization'] == 'unknown') {
+                        $journal['postprint']['authorization'] = 'cannot';
+                      }
+                    
+                      if (isset($permitted->embargo)) {
+                        if ($journal[$versions[$version]]['embargo']['num']) {
+                          if ($permitted->embargo->amount < $journal[$versions[$version]]['embargo']['num']) {
+                            $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
+                            $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
+                          } 
+                        }
+                        else {
                           $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
                           $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
-                        } 
-                      }
-                      else {
-                        $journal[$versions[$version]]['embargo']['type'] = $permitted->embargo->units;
-                        $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
+                        }
                       }
                     }
+                    else {
+                      $journal[$versions[$version]]['authorization'] = 'cannot';
+                    }
+                    
                   }
-                  else {
-                    $journal[$versions[$version]]['authorization'] = 'cannot';
-                  }
-                  
                 }
               }
-            }
-            elseif ($idx == 0) { //gold OA
-              if ($repository) {
-                $journal['postprint']['authorization'] = 'can';
+              elseif ($idx == 0) { //gold OA
+                if ($repository) {
+                  $journal['postprint']['authorization'] = 'can';
+                }
               }
             }
           }
@@ -99,8 +101,6 @@ function sherpaParse($issn) {
   }
   return $journal;
 }
-
-
 
 ?>
 
