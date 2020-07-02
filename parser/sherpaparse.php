@@ -39,7 +39,7 @@ function sherpaParse($issn) {
     $journal['title'] = $json->items[0]->title[0]->title;
     $journal['url'] = $json->items[0]->system_metadata->uri;
     foreach($json->items[0]->publisher_policy as $policy) {
-      if(isset($policy->permitted_oa) && $policy->internal_moniker == 'Default Policy') {
+      if(isset($policy->permitted_oa) && ($policy->internal_moniker == 'Default Policy' || substr($policy->internal_moniker, 0, 16) == 'Creative Commons')) {
         foreach($policy->permitted_oa as $idx => $permitted) {
           if ($permitted->additional_oa_fee == 'no') { //Green OA possible
             $repository = false;
