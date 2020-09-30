@@ -73,6 +73,10 @@ function sherpaParse($issn) {
                           $journal[$versions[$version]]['embargo']['num'] = $permitted->embargo->amount;
                         }
                       }
+                      elseif ($journal[$versions[$version]]['authorization'] == 'can') {
+                        $journal[$versions[$version]]['embargo']['type'] = "";
+                        $journal[$versions[$version]]['embargo']['num'] = "";
+                      }
                     }
                     else {
                       $journal[$versions[$version]]['authorization'] = 'cannot';
