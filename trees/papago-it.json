@@ -1,472 +1,504 @@
 {
     "0": {
-        "label": "La sua pubblicazione \u00e8 il risultato di un progetto di ricerca\nfinanziato (almeno per il 50%) da un programma di finanziamento europeo\no dal Fondo nazionale svizzero per la ricerca scientifica (FNS)?", 
+        "label": "La sua pubblicazione \u00e8 il risultato di un progetto di ricerca\nfinanziato (almeno per il 50%) da un programma di finanziamento europeo\no dal Fondo nazionale svizzero per la ricerca scientifica (FNS)?",
         "options": [
             {
-                "option": "No", 
+                "option": "No",
                 "value": "1"
-            }, 
+            },
             {
-                "option": "S\u00ec", 
-                "value": "6"
+                "option": "S\u00ec",
+                "value": "8"
             }
-        ], 
+        ],
         "parent": ""
-    }, 
+    },
     "1": {
-        "label": "Almeno la met\u00e0 del suo stipendio \u00e8 coperto\n da fondi pubblici?", 
+        "label": "Almeno la met\u00e0 del suo stipendio \u00e8 coperto\n da fondi pubblici?",
         "options": [
             {
-                "option": "S\u00ec", 
+                "option": "S\u00ec",
                 "value": "2"
-            }, 
+            },
             {
-                "option": "No", 
-                "value": "5"
+                "option": "No",
+                "value": "7"
             }
-        ], 
+        ],
         "parent": "0"
-    }, 
+    },
     "2": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
         "options": [
             {
-                "option": "Articolo o capitolo di libro", 
+                "option": "Articolo",
                 "value": "3"
-            }, 
+            },
             {
-                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)", 
+                "option": "Capitolo di libro",
+                "value": "5"
+            },
+            {
+                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)",
                 "value": "Fiche 11A"
             }
-        ], 
+        ],
         "parent": "1"
-    }, 
+    },
     "3": {
-        "label": "La sua pubblicazione \u00e8 o sar\u00e0", 
+        "label": "La sua pubblicazione \u00e8 o sar\u00e0 ",
         "options": [
             {
-                "option": "Pubblicata in Gold Open Access con licenza \nCreative Commons", 
+                "option": "Pubblicata in Gold Open Access con licenza \nCreative Commons",
                 "value": "Fiche 111A"
-            }, 
+            },
             {
-                "option": "Disponibile solo tramite abbonamento online/\n cartaceo", 
+                "option": "Disponibile solo tramite abbonamento online/\n cartaceo",
                 "value": "4"
             }
-        ], 
+        ],
         "parent": "2"
-    }, 
+    },
     "4": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
         "options": [
             {
-                "option": "Non ancora", 
+                "option": "Non ancora",
                 "value": "Fiche 1111A"
-            }, 
+            },
             {
-                "option": "S\u00ec", 
+                "option": "S\u00ec",
                 "value": "Fiche 1111B"
             }
-        ], 
+        ],
         "parent": "3"
-    }, 
+    },
     "5": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
+        "label": "La sua pubblicazione \u00e8 o sar\u00e0",
         "options": [
             {
-                "option": "Articolo o capitolo di libro", 
-                "value": "Fiche 12A"
-            }, 
+                "option": "Pubblicata in Gold Open Access con licenza \nCreative Commons",
+                "value": "Fiche 112A"
+            },
             {
-                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)", 
+                "option": "Disponibile solo tramite abbonamento online/\n cartaceo",
+                "value": "6"
+            }
+        ],
+        "parent": "2"
+    },
+    "6": {
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
+        "options": [
+            {
+                "option": "Non ancora",
+                "value": "Fiche 1122A"
+            },
+            {
+                "option": "S\u00ec",
+                "value": "Fiche 1122B"
+            }
+        ],
+        "parent": "5"
+    },
+    "7": {
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
+        "options": [
+            {
+                "option": "Articolo o capitolo di libro",
+                "value": "Fiche 12A"
+            },
+            {
+                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)",
                 "value": "Fiche 12B"
             }
-        ], 
+        ],
         "parent": "1"
-    }, 
-    "6": {
-        "label": "Chi ha finanziato la sua ricerca? (principale\n fonte di finanziamento)", 
+    },
+    "8": {
+        "label": "Chi ha finanziato la sua ricerca? (principale\n fonte di finanziamento)",
         "options": [
             {
-                "option": "H2020", 
-                "value": "7"
-            }, 
+                "option": "H2020",
+                "value": "9"
+            },
             {
-                "option": "FNS", 
-                "value": "15"
+                "option": "FNS",
+                "value": "17"
             }
-        ], 
+        ],
         "parent": "0"
-    }, 
-    "7": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
+    },
+    "9": {
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
         "options": [
             {
-                "option": "Articolo", 
-                "value": "8"
-            }, 
+                "option": "Articolo",
+                "value": "10"
+            },
             {
-                "option": "Libro, monografia, atti di convegno, letteratura \ngrigia", 
+                "option": "Libro, monografia, atti di convegno, letteratura \ngrigia",
                 "value": "Fiche E21A"
             }
-        ], 
-        "parent": "6"
-    }, 
-    "8": {
-        "label": "Il suo articolo \u00e8 o sar\u00e0", 
-        "options": [
-            {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
-                "value": "9"
-            }, 
-            {
-                "option": "Disponibile solo tramite abbonamento online/\n cartaceo", 
-                "value": "10"
-            }
-        ], 
-        "parent": "7"
-    }, 
-    "9": {
-        "label": "Il suo articolo \u00e8 depositato e condiviso in un repository/archivio aperto\n(ad es. repository/archivio istituzionale, PubMed Central, Zenodo,\nrepository/archivio disciplinare....)?", 
-        "options": [
-            {
-                "option": "S\u00ec", 
-                "value": "Fiche E2111A"
-            }, 
-            {
-                "option": "No", 
-                "value": "Fiche E2111B"
-            }
-        ], 
+        ],
         "parent": "8"
-    }, 
+    },
     "10": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
+        "label": "Il suo articolo \u00e8 o sar\u00e0",
         "options": [
             {
-                "option": "Non ancora", 
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
                 "value": "11"
-            }, 
+            },
             {
-                "option": "S\u00ec", 
+                "option": "Disponibile solo tramite abbonamento online/\n cartaceo",
                 "value": "12"
             }
-        ], 
-        "parent": "8"
-    }, 
+        ],
+        "parent": "9"
+    },
     "11": {
-        "label": "A quale area di ricerca appartiene la sua pubblicazione?", 
+        "label": "Il suo articolo \u00e8 depositato e condiviso in un repository/archivio aperto\n(ad es. repository/archivio istituzionale, PubMed Central, Zenodo,\nrepository/archivio disciplinare....)?",
         "options": [
             {
-                "option": "Scienze naturali e tecniche", 
-                "value": "Fiche E2112As"
-            }, 
+                "option": "S\u00ec",
+                "value": "Fiche E2111A"
+            },
             {
-                "option": "Scienze umanistiche e sociali", 
-                "value": "Fiche E2112Ah"
+                "option": "No",
+                "value": "Fiche E2111B"
             }
-        ], 
+        ],
         "parent": "10"
-    }, 
+    },
     "12": {
-        "label": "Il suo articolo \u00e8 depositato e condiviso in un repository/archivio aperto\n(ad es. repository/archivio istituzionale, PubMed Central, Zenodo,\nrepository/archivio disciplinare....)?", 
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
         "options": [
             {
-                "option": "S\u00ec", 
+                "option": "Non ancora",
                 "value": "13"
-            }, 
+            },
             {
-                "option": "No", 
+                "option": "S\u00ec",
                 "value": "14"
             }
-        ], 
+        ],
         "parent": "10"
-    }, 
+    },
     "13": {
-        "label": "A quale area di ricerca appartiene la sua pubblicazione?", 
+        "label": "A quale area di ricerca appartiene la sua pubblicazione?",
         "options": [
             {
-                "option": "Scienze naturali e tecniche", 
-                "value": "Fiche E21122As"
-            }, 
+                "option": "Scienze naturali e tecniche",
+                "value": "Fiche E2112As"
+            },
             {
-                "option": "Scienze umanistiche e sociali", 
+                "option": "Scienze umanistiche e sociali",
+                "value": "Fiche E2112Ah"
+            }
+        ],
+        "parent": "12"
+    },
+    "14": {
+        "label": "Il suo articolo \u00e8 depositato e condiviso in un repository/archivio aperto\n(ad es. repository/archivio istituzionale, PubMed Central, Zenodo,\nrepository/archivio disciplinare....)?",
+        "options": [
+            {
+                "option": "S\u00ec",
+                "value": "15"
+            },
+            {
+                "option": "No",
+                "value": "16"
+            }
+        ],
+        "parent": "12"
+    },
+    "15": {
+        "label": "A quale area di ricerca appartiene la sua pubblicazione?",
+        "options": [
+            {
+                "option": "Scienze naturali e tecniche",
+                "value": "Fiche E21122As"
+            },
+            {
+                "option": "Scienze umanistiche e sociali",
                 "value": "Fiche E21122Ah"
             }
-        ], 
-        "parent": "12"
-    }, 
-    "14": {
-        "label": "A quale area di ricerca appartiene la sua pubblicazione?", 
+        ],
+        "parent": "14"
+    },
+    "16": {
+        "label": "A quale area di ricerca appartiene la sua pubblicazione?",
         "options": [
             {
-                "option": "Scienze naturali e tecniche", 
+                "option": "Scienze naturali e tecniche",
                 "value": "Fiche E21122Bs"
-            }, 
+            },
             {
-                "option": "Scienze umanistiche e sociali", 
+                "option": "Scienze umanistiche e sociali",
                 "value": "Fiche E21122Bh"
             }
-        ], 
-        "parent": "12"
-    }, 
-    "15": {
-        "label": "Il suo progetto \u00e8 iniziato ufficialmente", 
+        ],
+        "parent": "14"
+    },
+    "17": {
+        "label": "Il suo progetto \u00e8 iniziato ufficialmente",
         "options": [
             {
-                "option": "Dopo il 1\u00b0 aprile 2018", 
-                "value": "16"
-            }, 
+                "option": "Dopo il 1\u00b0 aprile 2018",
+                "value": "18"
+            },
             {
-                "option": "Prima del 1\u00b0 aprile 2018", 
-                "value": "22"
+                "option": "Prima del 1\u00b0 aprile 2018",
+                "value": "24"
             }
-        ], 
-        "parent": "6"
-    }, 
-    "16": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
+        ],
+        "parent": "8"
+    },
+    "18": {
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
         "options": [
             {
-                "option": "Articolo", 
-                "value": "17"
-            }, 
+                "option": "Articolo",
+                "value": "19"
+            },
             {
-                "option": "Capitolo di libro", 
-                "value": "20"
-            }, 
+                "option": "Capitolo di libro",
+                "value": "22"
+            },
             {
-                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)", 
+                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)",
                 "value": "Fiche S221A"
             }
-        ], 
-        "parent": "15"
-    }, 
-    "17": {
-        "label": "Il suo articolo \u00e8 o sar\u00e0", 
-        "options": [
-            {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
-                "value": "18"
-            }, 
-            {
-                "option": "Disponibile solo tramite abbonamento online/\n cartaceo", 
-                "value": "19"
-            }
-        ], 
-        "parent": "16"
-    }, 
-    "18": {
-        "label": "Su quale tipo di periodico apparir\u00e0  il\nsuo articolo?", 
-        "options": [
-            {
-                "option": "Periodico Open Access (Gold Open Access - tutti gli articoli\nsono disponibili in Open Access)", 
-                "value": "Fiche S22111A"
-            }, 
-            {
-                "option": "Periodico in abbonamento che le ha proposto di pubblicare il\nsuo articolo in modalit\u00e0 Open Access contro il pagamento di APC\n(modello ibrido - dove coesistono articoli in Open Access e articoli ad\naccesso a pagamento)", 
-                "value": "Fiche S22111B"
-            }
-        ], 
+        ],
         "parent": "17"
-    }, 
+    },
     "19": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
+        "label": "Il suo articolo \u00e8 o sar\u00e0",
         "options": [
             {
-                "option": "Non ancora", 
-                "value": "Fiche S22112A"
-            }, 
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
+                "value": "20"
+            },
             {
-                "option": "S\u00ec", 
-                "value": "Fiche S22112B"
-            }
-        ], 
-        "parent": "17"
-    }, 
-    "20": {
-        "label": "Il suo capitolo \u00e8 o sar\u00e0", 
-        "options": [
-            {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
-                "value": "Fiche S2212A"
-            }, 
-            {
-                "option": "Distribuito solo con accesso a pagamento", 
+                "option": "Disponibile solo tramite abbonamento online/\n cartaceo",
                 "value": "21"
             }
-        ], 
-        "parent": "16"
-    }, 
-    "21": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
+        ],
+        "parent": "18"
+    },
+    "20": {
+        "label": "Su quale tipo di periodico apparir\u00e0  il\nsuo articolo?",
         "options": [
             {
-                "option": "Non ancora", 
-                "value": "Fiche S22122A"
-            }, 
+                "option": "Periodico Open Access (Gold Open Access - tutti gli articoli\nsono disponibili in Open Access)",
+                "value": "Fiche S22111A"
+            },
             {
-                "option": "S\u00ec", 
+                "option": "Periodico in abbonamento che le ha proposto di pubblicare il\nsuo articolo in modalit\u00e0 Open Access contro il pagamento di APC\n(modello ibrido - dove coesistono articoli in Open Access e articoli ad\naccesso a pagamento)",
+                "value": "Fiche S22111B"
+            }
+        ],
+        "parent": "19"
+    },
+    "21": {
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
+        "options": [
+            {
+                "option": "Non ancora",
+                "value": "Fiche S22112A"
+            },
+            {
+                "option": "S\u00ec",
+                "value": "Fiche S22112B"
+            }
+        ],
+        "parent": "19"
+    },
+    "22": {
+        "label": "Il suo capitolo \u00e8 o sar\u00e0",
+        "options": [
+            {
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
+                "value": "Fiche S2212A"
+            },
+            {
+                "option": "Distribuito solo con accesso a pagamento",
+                "value": "23"
+            }
+        ],
+        "parent": "18"
+    },
+    "23": {
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
+        "options": [
+            {
+                "option": "Non ancora",
+                "value": "Fiche S22122A"
+            },
+            {
+                "option": "S\u00ec",
                 "value": "Fiche S22122B"
             }
-        ], 
-        "parent": "20"
-    }, 
-    "22": {
-        "label": "La sua pubblicazione \u00e8 stata pubblicata", 
-        "options": [
-            {
-                "option": "Dopo il 1\u00b0 aprile 2018", 
-                "value": "23"
-            }, 
-            {
-                "option": "Prima del 1\u00b0 aprile 2018", 
-                "value": "30"
-            }
-        ], 
-        "parent": "15"
-    }, 
-    "23": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
-        "options": [
-            {
-                "option": "Articolo", 
-                "value": "24"
-            }, 
-            {
-                "option": "Capitolo di libro", 
-                "value": "27"
-            }, 
-            {
-                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)", 
-                "value": "29"
-            }
-        ], 
+        ],
         "parent": "22"
-    }, 
+    },
     "24": {
-        "label": "Il suo articolo \u00e8 o sar\u00e0", 
+        "label": "La sua pubblicazione \u00e8 stata pubblicata",
         "options": [
             {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
+                "option": "Dopo il 1\u00b0 aprile 2018",
                 "value": "25"
-            }, 
+            },
             {
-                "option": "Disponibile solo tramite abbonamento online/ \ncartaceo", 
-                "value": "26"
-            }
-        ], 
-        "parent": "23"
-    }, 
-    "25": {
-        "label": "Su quale tipo di periodico apparir\u00e0  il\nsuo articolo?", 
-        "options": [
-            {
-                "option": "Periodico Open Access (Gold Open Access - tutti gli articoli\nsono disponibili in Open Access)", 
-                "value": "Fiche S222111A"
-            }, 
-            {
-                "option": "Periodico in abbonamento che le ha proposto di pubblicare il\nsuo articolo in modalit\u00e0 Open Access contro il pagamento di APC\n(modello ibrido - dove coesistono articoli in Open Access e articoli ad\naccesso a pagamento)", 
-                "value": "Fiche S222111B"
-            }
-        ], 
-        "parent": "24"
-    }, 
-    "26": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
-        "options": [
-            {
-                "option": "Non ancora", 
-                "value": "Fiche S222112A"
-            }, 
-            {
-                "option": "S\u00ec", 
-                "value": "Fiche S222112B"
-            }
-        ], 
-        "parent": "24"
-    }, 
-    "27": {
-        "label": "Il suo capitolo \u00e8 o sar\u00e0", 
-        "options": [
-            {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
-                "value": "Fiche S22212A"
-            }, 
-            {
-                "option": "Disponibile solo tramite\nabbonamento online/  cartaceo", 
-                "value": "28"
-            }
-        ], 
-        "parent": "23"
-    }, 
-    "28": {
-        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)", 
-        "options": [
-            {
-                "option": "Non ancora", 
-                "value": "Fiche S222122A"
-            }, 
-            {
-                "option": "S\u00ec", 
-                "value": "Fiche S222122B"
-            }
-        ], 
-        "parent": "27"
-    }, 
-    "29": {
-        "label": "Sono stati concessi finanziamenti per\ncoprire i costi di pubblicazione?", 
-        "options": [
-            {
-                "option": "S\u00ec", 
-                "value": "Fiche S22213A"
-            }, 
-            {
-                "option": "No", 
-                "value": "Fiche S22213B"
-            }
-        ], 
-        "parent": "23"
-    }, 
-    "30": {
-        "label": "Qual \u00e8 il formato della sua pubblicazione?", 
-        "options": [
-            {
-                "option": "Articolo", 
-                "value": "31"
-            }, 
-            {
-                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)", 
-                "value": "Fiche S2222A"
-            }
-        ], 
-        "parent": "22"
-    }, 
-    "31": {
-        "label": "Il suo articlolo \u00e8 stato", 
-        "options": [
-            {
-                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons", 
-                "value": "Fiche S22221A"
-            }, 
-            {
-                "option": "Disponibile solo tramite abbonamento online/\n cartaceo", 
+                "option": "Prima del 1\u00b0 aprile 2018",
                 "value": "32"
             }
-        ], 
-        "parent": "30"
-    }, 
-    "32": {
-        "label": "A quale area di ricerca appartiene la sua pubblicazione?", 
+        ],
+        "parent": "17"
+    },
+    "25": {
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
         "options": [
             {
-                "option": "Scienze naturali e tecniche", 
-                "value": "Fiche S22221Bs"
-            }, 
+                "option": "Articolo",
+                "value": "26"
+            },
             {
-                "option": "Scienze umanistiche e sociali", 
+                "option": "Capitolo di libro",
+                "value": "29"
+            },
+            {
+                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)",
+                "value": "31"
+            }
+        ],
+        "parent": "24"
+    },
+    "26": {
+        "label": "Il suo articolo \u00e8 o sar\u00e0",
+        "options": [
+            {
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
+                "value": "27"
+            },
+            {
+                "option": "Disponibile solo tramite abbonamento online/ \ncartaceo",
+                "value": "28"
+            }
+        ],
+        "parent": "25"
+    },
+    "27": {
+        "label": "Su quale tipo di periodico apparir\u00e0  il\nsuo articolo?",
+        "options": [
+            {
+                "option": "Periodico Open Access (Gold Open Access - tutti gli articoli\nsono disponibili in Open Access)",
+                "value": "Fiche S222111A"
+            },
+            {
+                "option": "Periodico in abbonamento che le ha proposto di pubblicare il\nsuo articolo in modalit\u00e0 Open Access contro il pagamento di APC\n(modello ibrido - dove coesistono articoli in Open Access e articoli ad\naccesso a pagamento)",
+                "value": "Fiche S222111B"
+            }
+        ],
+        "parent": "26"
+    },
+    "28": {
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
+        "options": [
+            {
+                "option": "Non ancora",
+                "value": "Fiche S222112A"
+            },
+            {
+                "option": "S\u00ec",
+                "value": "Fiche S222112B"
+            }
+        ],
+        "parent": "26"
+    },
+    "29": {
+        "label": "Il suo capitolo \u00e8 o sar\u00e0",
+        "options": [
+            {
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
+                "value": "Fiche S22212A"
+            },
+            {
+                "option": "Disponibile solo tramite\nabbonamento online/  cartaceo",
+                "value": "30"
+            }
+        ],
+        "parent": "25"
+    },
+    "30": {
+        "label": "Ha ceduto i diritti esclusivi di diffusione al suo editore?\n(contratto firmato, accettazione dei termini e delle condizioni di\npubblicazione....)",
+        "options": [
+            {
+                "option": "Non ancora",
+                "value": "Fiche S222122A"
+            },
+            {
+                "option": "S\u00ec",
+                "value": "Fiche S222122B"
+            }
+        ],
+        "parent": "29"
+    },
+    "31": {
+        "label": "Sono stati concessi finanziamenti per\ncoprire i costi di pubblicazione?",
+        "options": [
+            {
+                "option": "S\u00ec",
+                "value": "Fiche S22213A"
+            },
+            {
+                "option": "No",
+                "value": "Fiche S22213B"
+            }
+        ],
+        "parent": "25"
+    },
+    "32": {
+        "label": "Qual \u00e8 il formato della sua pubblicazione?",
+        "options": [
+            {
+                "option": "Articolo",
+                "value": "33"
+            },
+            {
+                "option": "Libro (monografia, tesi di laurea e/o abilitazione,\nmiscellanea)",
+                "value": "Fiche S2222A"
+            }
+        ],
+        "parent": "24"
+    },
+    "33": {
+        "label": "Il suo articlolo \u00e8 stato",
+        "options": [
+            {
+                "option": "Pubblicato in Gold Open Access con licenza\n Creative Commons",
+                "value": "Fiche S22221A"
+            },
+            {
+                "option": "Disponibile solo tramite abbonamento online/\n cartaceo",
+                "value": "34"
+            }
+        ],
+        "parent": "32"
+    },
+    "34": {
+        "label": "A quale area di ricerca appartiene la sua pubblicazione?",
+        "options": [
+            {
+                "option": "Scienze naturali e tecniche",
+                "value": "Fiche S22221Bs"
+            },
+            {
+                "option": "Scienze umanistiche e sociali",
                 "value": "Fiche S22221Bh"
             }
-        ], 
-        "parent": "31"
+        ],
+        "parent": "33"
     }
 }
