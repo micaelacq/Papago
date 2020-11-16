@@ -14,21 +14,21 @@ var lang = "fr";
 //URL for Papago content tree
 var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
 //URL for information pdf sheets (including trailing slash)
-var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdf/";
+var pdfUrl = "https://www3.unifr.ch/apps/bcu/papago/pdftest/";
 //suffix for pdf sheets (including ".")
-var pdfSuffix = ".pdf";
+var pdfSuffix = ".pdf?nostats";
 //default institution (for institutional personalization, with preceeding underscore)
 var inst = '_unil';
 // *** parameters end **
 
-var sherpa = ["1111A", "1111B", "12A", "S22112A", "S22112B", "S222112A", "S222112B", "S22221Bs", "S22221Bb", "E2112As", "E2112Ah", "E21122As", "E21122Ah", "E21122Bs", "E21122Bh"];
+var jSearch = ["111A", "1111A", "1111B", "12A", "S22112A", "S22112B", "S222112A", "S222112B", "S22221Bs", "S22221Bb", "E2112As", "E2112Ah", "E21122As", "E21122Ah", "E21122Bs", "E21122Bh", "S222111B", "S22111B", "111A", "E2111A", "E2111B","S22111A", "S222111A"];
 
 var translate = {
     "fr" : {
       "Fiche": "Fiche",
       "text" : "La fiche ci-dessous vous fournira des conseils sur les possibilit\u00e9s de financement ainsi que sur vos droits et obligations concernant cette publication.",
       "error" : "Papago n\'est pas accessible pour le moment.",
-      "jSearch" : "Dans quelle revue, votre article est ou a été publié ?",
+      "jSearch" : "Nom de la revue o\u00f9 votre article est ou sera publi\u00e9<br><em>Veuillez saisir le nom de la revue, appuyer sur le bouton vert et patienter que la liste des r\u00e9sultats s'affiche (cela peut prendre quelques secondes).</em>",
       "jTitle" : "Titre de la revue",
       "jDefault" : "Revue pas trouvé"},
     "de" : {
@@ -36,20 +36,20 @@ var translate = {
       "text" : "Folgendes Infoblatt enthält Ratschläge zu Finanzierungsmöglichkeiten sowie zu Ihren Rechten und Pflichten in Bezug auf diese Publikation.",
       "error" : "Papago ist zur Zeit nicht erreichbar.",
       "jSearch" : "In welcher Zeitschrift wird oder wurde der Artikel veröffentlicht?",
-      "jTitle" : "Titel der Zeitschrift",
+      "jTitle" : "Titel der Zeitschrift<br><em>Geben Sie bitte den Namen der Zeitschrift ein und klicken Sie auf den grünen Knopf.  Die Anzeige der Ergebnisse dauert unter Umständen einige Sekunden.</em>",
       "jDefault" : "Zeitschrift nicht gefunden"},
     "en" : {
       "Fiche": "Information Sheet",
       "text" : "The following factsheet contains further advice on financing options and on your rights and obligations in relation to this publication.",
       "error" : "Papago is not available at the moment.",
-      "jSearch" : "In which journal was or will be published your article?",
+      "jSearch" : "In which journal was or will be published your article?<br><em>Please, entre the name of the journal and click the green button. The result will be displayed in a few seconds at latest.</em>",
       "jTitle" : "Journal title",
       "jDefault" : "Journal not found"},
     "it" : {
       "Fiche": "Scheda Informativa",
       "text" : "La seguente scheda informativa contiene ulteriori consigli sulle possibilità di finanziamento e sui diritti e obblighi relativi a questa pubblicazione.",
       "error" : "Papago non è disponibile per il momento.",
-      "jSearch" : "In quale rivista sarà pubblicato o è stato pubblicato l'articolo",
+      "jSearch" : "In quale rivista sarà pubblicato o è stato pubblicato l'articolo ?<br><em>Inserire il nome della rivista, premere il pulsante verde e attendere che appaia la lista dei risultati (potrebbe richiedere qualche secondo).</em>",
       "jTitle" : "Titolo della rivista",
       "jDefault" : "Rivista non trovata"},
 }
@@ -60,7 +60,7 @@ function format(item) {
     parent = oldItem;
     item.replace("Fiche", translate[lang]["Fiche"]);
     url = item.split(' ');
-    if ($.inArray(item.substr(6), sherpa) != -1 && item.indexOf(':') == -1) {
+    if ($.inArray(item.substr(6), jSearch) != -1 && item.indexOf(':') == -1) {
       code = '<p>' + translate[lang]['jSearch'] + '</p><form class="form-inline" id="jForm"><input type="text" id="jsearch" name="jsearch" class="form-control" placeholder="' + translate[lang]['jTitle'] + '">&nbsp;<button id="sherpa" class="btn btn-success" style="padding:10px"><i class="fa fa-search"></i></button></form>';
       sheet = item;
       if (jList) {
@@ -113,7 +113,7 @@ function reformat (){
 function goback() {
 	format(parent);
 }
- 
+
 $(document).ready(function(){
   param = {};
   str = window.location.search.substr(1);
@@ -147,44 +147,71 @@ $(document).ready(function(){
   $('#question').on('click', '#sherpa', function() {
     jTitle = $('#jsearch').val();
     if (jTitle != '') {
-      $.ajax({
-        type: "GET",
+        sTitle = jTitle.replace('&','and');
         
-    crossDomain: true,
-        url:'https://v2.sherpa.ac.uk/cgi/retrieve?item-type=publication&api-key=FF5C7B90-1032-11EA-9359-7FE62A6A9D3C&format=Json&filter=[["title","contains word","' + jTitle + '*"]]'})
-      .done(function(data) {
-        pattern = new RegExp(jTitle, 'gi');
-        jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
-        journals = data.items;
-        if (journals.length > 0) {
-          $.each( journals, function(index, journal){
-            console.log(journal);
-            issn = journal['issns'][0]['issn'];
-            if (issn) {
-              title = journal['title'][0]['title'];
-              match = title.match(pattern);
-              if (match) {
-                title = title.replace(match[0], '<b>' + match +'</b>');
+        $.ajax({
+          type: "GET",        
+          crossDomain: true,
+          url: 'https://www3.unifr.ch/apps/bcu/papago/rapapi/title/' +jTitle})
+        .done(function(data) {
+          pattern = new RegExp(jTitle, 'gi');
+          jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
+          journals = data;
+          if (journals.length > 0) {
+            $.each( journals, function(index, journal){
+                issn = journal.issn;
+                if(issn) {
+                    title = journal.title;
+                    match = title.match(pattern);
+                    if (match) {
+                        title = title.replace(match[0], '<b>' + match +'</b>');
+                    }
+                    jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
+                }
+            });
+            jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
+            $('div.list-group').remove();
+            $('#question').append(jList);
+          }
+          else {
+            $.ajax({
+              tpye: "GET",
+              crossDomain:true,
+              url: 'https://v2.sherpa.ac.uk/cgi/retrieve?item-type=publication&api-key=FF5C7B90-1032-11EA-9359-7FE62A6A9D3C&format=Json&filter=[["title","contains word","' + sTitle + '*"]]'})
+            .done(function(data) {
+              //jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
+              journals = data.items;
+              if(journals.length > 0) {
+                pattern = new RegExp(jTitle, 'gi');
+                $.each(journals, function(index, journal){
+                    issn = journal['issns'][0]['issn'];
+                    if (issn) {
+                        title = journal['title'][0]['title'];
+                        match = title.match(pattern);
+                        if (match) {
+                            title = title.replace(match[0], '<b>' + match +'</b>');
+                        }
+                        jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
+                    }
+                });
+
               }
-              jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
-            }
-          });
-        }
-        jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
-        $('div.list-group').remove();
-        $('#question').append(jList);
-      })
-      .fail(function(){
-       format(sheet + ':');
-      });
-      
+              jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
+                $('div.list-group').remove();
+              $('#question').append(jList);
+             });
+          }
+        })
+          .fail(function(){
+          format(sheet + ':');
+        });
     }
     return false;
   });
 });
 </script>
 <div style="margin: 1rem">
-  <h1>Papago</h1>
+  <h1>Papago TEST</h1>
   <div id="question" style="margin-bottom: 1rem">
   </div>
   <div id="buttons" style="display:none">
