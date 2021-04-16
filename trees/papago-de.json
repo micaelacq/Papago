@@ -305,11 +305,11 @@
         "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
         "options": [
             {
-                "option": "Pas encore",
+                "option": "Noch nicht",
                 "value": "Fiche S22112A"
             },
             {
-                "option": "Oui",
+                "option": "Ja",
                 "value": "Fiche S22112B"
             }
         ],
