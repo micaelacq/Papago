@@ -152,7 +152,7 @@ $(document).ready(function(){
         $.ajax({
           type: "GET",        
           crossDomain: true,
-          url: 'https://www3.unifr.ch/apps/bcu/papago/rapapi/title/' +jTitle})
+          url: 'https://webapps.unifr.ch/papago/rapapi/title/' +jTitle})
         .done(function(data) {
           pattern = new RegExp(jTitle, 'gi');
           jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
