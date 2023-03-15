@@ -4,4 +4,4 @@ To create the Papago decision trees (located in https://github.com/micaelacq/Pap
 
 Have a look at the english decision tree as an example:
 
-![Papago Decision Tree[(https://github.com/micaelacq/Papago/blob/master/parser/papago-en.png?raw=true)
+![Papago Decision Tree](https://github.com/micaelacq/Papago/blob/master/parser/papago-en.png?raw=true)
