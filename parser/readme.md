@@ -22,4 +22,4 @@ It was possible to parse X-Mind files from version 8 directly. If you are using 
 
 `python3 xmind2papago.py papago.xmind`
 
-This extracts the 'content.xml' from the X-Mind container, parses the file, and creates (or overwrites) a file called 'papago.json'.
+This extracts the 'content.xml' from the X-Mind container, parses the file, and creates (or overwrites) a file named always 'papago.json'.
