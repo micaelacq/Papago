@@ -11,14 +11,14 @@ Have a look at the english decision tree as an example:
 The red and blue squares are only for orientation and have no influence on the tree structure.
 
 ## Tree Parsing
-Trees created in X-Mind must be exported to .opml files. The .opml files can afterwards be parsed by opml2papago.py to create the trees in JSON-format.
+After ther creation, the tree ist exported from X-Mind to an .opml file. The .opml file is afterwards parsed with opml2papago.py to create the tree in JSON-format.
 
 `python3 opml2papago.py papago.opml`
 
 This creates (or overwrites) the JSON file with the same name (papago.json).
 
 ## Tree Parsing Legacy Mode
-It was possible to parse X-Mind files from version 8 directly. If you are using still this version, you can use xmind2papago.py in the same way
+It was possible to parse X-Mind files from version 8 directly. If you are using still this version, you can use xmind2papago.py in the same way:
 
 `python3 xmind2papago.py papago.xmind`
 
