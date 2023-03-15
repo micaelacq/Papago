@@ -88,7 +88,7 @@
         "parent": "2"
     },
     "6": {
-        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the publisher...)",
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
                 "option": "Not yet",
@@ -119,12 +119,12 @@
         "label": "Who funded your research? (main source of funding)",
         "options": [
             {
-                "option": "H2020",
+                "option": "European Commission (H2020/Horizon Europe)",
                 "value": "9"
             },
             {
-                "option": "FNS",
-                "value": "17"
+                "option": "SNSF",
+                "value": "20"
             }
         ],
         "parent": "0"
@@ -152,12 +152,26 @@
             },
             {
                 "option": "Available only via online/paper subscription access",
-                "value": "12"
+                "value": "13"
             }
         ],
         "parent": "9"
     },
     "11": {
+        "label": "What type of journal will your article appear in?",
+        "options": [
+            {
+                "option": "Open Access Journal (Gold Open Access - all articles are available in Open Access)",
+                "value": "12"
+            },
+            {
+                "option": "Subscription journal that offered you to publish your article in Open Access in return for payment of APC (hybrid - where Open Access articles and paid access articles coexist)",
+                "value": "Fiche E21111"
+            }
+        ],
+        "parent": "10"
+    },
+    "12": {
         "label": "Is your publication deposited and being shared in an open archive (e.g. institutional repository, PubMed Central, Zenodo, disciplinary repository...)?",
         "options": [
             {
@@ -169,23 +183,51 @@
                 "value": "Fiche E2111B"
             }
         ],
-        "parent": "10"
+        "parent": "11"
     },
-    "12": {
-        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
+    "13": {
+        "label": "Which programme does your funding belong to?",
         "options": [
             {
-                "option": "Not yet",
-                "value": "13"
+                "option": "Horizon Europe",
+                "value": "14"
             },
             {
-                "option": "Yes",
-                "value": "14"
+                "option": "H2020",
+                "value": "15"
             }
         ],
         "parent": "10"
     },
-    "13": {
+    "14": {
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
+        "options": [
+            {
+                "option": "Not yet",
+                "value": "Fiche E21112Ap"
+            },
+            {
+                "option": "Yes",
+                "value": "Fiche E21112Bp"
+            }
+        ],
+        "parent": "13"
+    },
+    "15": {
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
+        "options": [
+            {
+                "option": "Not yet",
+                "value": "16"
+            },
+            {
+                "option": "Yes",
+                "value": "17"
+            }
+        ],
+        "parent": "13"
+    },
+    "16": {
         "label": "To which area of research is your publication associated?",
         "options": [
             {
@@ -197,23 +239,23 @@
                 "value": "Fiche E2112Ah"
             }
         ],
-        "parent": "12"
+        "parent": "15"
     },
-    "14": {
+    "17": {
         "label": "Is your publication deposited and being shared in an open archive (e.g. institutional repository, PubMed Central, Zenodo, disciplinary repository...)?",
         "options": [
             {
                 "option": "Yes",
-                "value": "15"
+                "value": "18"
             },
             {
                 "option": "No",
-                "value": "16"
+                "value": "19"
             }
         ],
-        "parent": "12"
+        "parent": "15"
     },
-    "15": {
+    "18": {
         "label": "To which area of research is your publication associated?",
         "options": [
             {
@@ -225,9 +267,9 @@
                 "value": "Fiche E21122Ah"
             }
         ],
-        "parent": "14"
+        "parent": "17"
     },
-    "16": {
+    "19": {
         "label": "To which area of research is your publication associated?",
         "options": [
             {
@@ -239,56 +281,42 @@
                 "value": "Fiche E21122Bh"
             }
         ],
-        "parent": "14"
+        "parent": "17"
     },
-    "17": {
-        "label": "This project officially started",
-        "options": [
-            {
-                "option": "After April 1,2018",
-                "value": "18"
-            },
-            {
-                "option": "Before April 1,2018",
-                "value": "24"
-            }
-        ],
-        "parent": "8"
-    },
-    "18": {
+    "20": {
         "label": "What is the format of your publication?",
         "options": [
             {
                 "option": "Article",
-                "value": "19"
+                "value": "21"
             },
             {
                 "option": "Book chapter",
-                "value": "22"
+                "value": "26"
             },
             {
                 "option": "Book (monograph, dissertation and/or habilitation, collective works)",
                 "value": "Fiche S221A"
             }
         ],
-        "parent": "17"
+        "parent": "8"
     },
-    "19": {
+    "21": {
         "label": "Your article is or will be",
         "options": [
             {
                 "option": "Published in Gold Open Access under a Creative Commons license",
-                "value": "20"
+                "value": "22"
             },
             {
                 "option": "Available only via online/paper subscription access",
-                "value": "21"
+                "value": "23"
             }
         ],
-        "parent": "18"
+        "parent": "20"
     },
-    "20": {
-        "label": "What is the type of journal where your article will appear?",
+    "22": {
+        "label": "What type of journal will your article appear in?",
         "options": [
             {
                 "option": "Open Access Journal (Gold Open Access - all articles are available in Open Access)",
@@ -299,9 +327,37 @@
                 "value": "Fiche S22111B"
             }
         ],
-        "parent": "19"
+        "parent": "21"
     },
-    "21": {
+    "23": {
+        "label": "This project officially started",
+        "options": [
+            {
+                "option": "After 1 January 2023",
+                "value": "24"
+            },
+            {
+                "option": "Before 1 January 2023",
+                "value": "25"
+            }
+        ],
+        "parent": "21"
+    },
+    "24": {
+        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
+        "options": [
+            {
+                "option": "Not yet",
+                "value": "Fiche S21112Ap"
+            },
+            {
+                "option": "Yes",
+                "value": "Fiche S21112Bp"
+            }
+        ],
+        "parent": "23"
+    },
+    "25": {
         "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
@@ -313,9 +369,9 @@
                 "value": "Fiche S22112B"
             }
         ],
-        "parent": "19"
+        "parent": "23"
     },
-    "22": {
+    "26": {
         "label": "Your chapter is or will be",
         "options": [
             {
@@ -323,182 +379,24 @@
                 "value": "Fiche S2212A"
             },
             {
-                "option": "Distributed only via paid access",
-                "value": "23"
-            }
-        ],
-        "parent": "18"
-    },
-    "23": {
-        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
-        "options": [
-            {
-                "option": "Not yet",
-                "value": "Fiche S22122A"
-            },
-            {
-                "option": "Yes",
-                "value": "Fiche S22122B"
-            }
-        ],
-        "parent": "22"
-    },
-    "24": {
-        "label": "Your publication was published",
-        "options": [
-            {
-                "option": "After April 1,2018",
-                "value": "25"
-            },
-            {
-                "option": "Before April 1,2018",
-                "value": "32"
-            }
-        ],
-        "parent": "17"
-    },
-    "25": {
-        "label": "What is the format of your publication?",
-        "options": [
-            {
-                "option": "Article",
-                "value": "26"
-            },
-            {
-                "option": "Book chapter",
-                "value": "29"
-            },
-            {
-                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
-                "value": "31"
-            }
-        ],
-        "parent": "24"
-    },
-    "26": {
-        "label": "Your article is or will be",
-        "options": [
-            {
-                "option": "Published in Gold Open Access under a Creative Commons license",
-                "value": "27"
-            },
-            {
                 "option": "Available only via online/paper subscription access",
-                "value": "28"
+                "value": "27"
             }
         ],
-        "parent": "25"
+        "parent": "20"
     },
     "27": {
-        "label": "What is the type of journal where your article will appear?",
-        "options": [
-            {
-                "option": "Open Access Journal (Gold Open Access - all articles are available in Open Access)",
-                "value": "Fiche S222111A"
-            },
-            {
-                "option": "Subscription journal that offered you to publish your article in Open Access in return for payment of APC (hybrid - where Open Access articles and paid access articles coexist)",
-                "value": "Fiche S222111B"
-            }
-        ],
-        "parent": "26"
-    },
-    "28": {
         "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
         "options": [
             {
                 "option": "Not yet",
-                "value": "Fiche S222112A"
+                "value": "Fiche S22121A"
             },
             {
                 "option": "Yes",
-                "value": "Fiche S222112B"
+                "value": "Fiche S22121B"
             }
         ],
         "parent": "26"
-    },
-    "29": {
-        "label": "Your chapter is or will be",
-        "options": [
-            {
-                "option": "Published in Gold Open Access under a Creative Commons license",
-                "value": "Fiche S22212A"
-            },
-            {
-                "option": "Distributed only via paid access",
-                "value": "30"
-            }
-        ],
-        "parent": "25"
-    },
-    "30": {
-        "label": "Have you assigned exclusive diffusion rights to your publisher? (signed contract, acceptance of terms and conditions of the journal...)",
-        "options": [
-            {
-                "option": "Not yet",
-                "value": "Fiche S222122A"
-            },
-            {
-                "option": "Yes",
-                "value": "Fiche S222122B"
-            }
-        ],
-        "parent": "29"
-    },
-    "31": {
-        "label": "Have you been granted resources for publication costs?",
-        "options": [
-            {
-                "option": "Yes",
-                "value": "Fiche S22213A"
-            },
-            {
-                "option": "No",
-                "value": "Fiche S22213B"
-            }
-        ],
-        "parent": "25"
-    },
-    "32": {
-        "label": "What is the format of your publication?",
-        "options": [
-            {
-                "option": "Article",
-                "value": "33"
-            },
-            {
-                "option": "Book (monograph, dissertation and/or habilitation, collective works)",
-                "value": "Fiche S2222A"
-            }
-        ],
-        "parent": "24"
-    },
-    "33": {
-        "label": "Your article was",
-        "options": [
-            {
-                "option": "Published in Gold Open Access under a Creative Commons license",
-                "value": "Fiche S22221A"
-            },
-            {
-                "option": "Available only via online/paper subscription access",
-                "value": "34"
-            }
-        ],
-        "parent": "32"
-    },
-    "34": {
-        "label": "To which area of research is your publication associated?",
-        "options": [
-            {
-                "option": "Natural sciences and technology",
-                "value": "Fiche S22221Bs"
-            },
-            {
-                "option": "Humanities and Social Sciences",
-                "value": "Fiche S22221Bh"
-            }
-        ],
-        "parent": "33"
     }
 }

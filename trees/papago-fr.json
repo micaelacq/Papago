@@ -119,12 +119,12 @@
         "label": "Qui a financ\u00e9 vos recherches? (source principale de financement)",
         "options": [
             {
-                "option": "H2020",
+                "option": "Commission Europ\u00e9enne (H2020/Horizon Europe)",
                 "value": "9"
             },
             {
                 "option": "FNS",
-                "value": "17"
+                "value": "20"
             }
         ],
         "parent": "0"
@@ -152,12 +152,26 @@
             },
             {
                 "option": "Diffus\u00e9 uniquement via un acc\u00e8s par abonnement",
-                "value": "12"
+                "value": "13"
             }
         ],
         "parent": "9"
     },
     "11": {
+        "label": "Quel est le type de revue o\u00f9 votre article appraitra?",
+        "options": [
+            {
+                "option": "Revue Open Access (Gold Open Access - tous les articles de la revue sont disponibles en Open Access)",
+                "value": "12"
+            },
+            {
+                "option": "Revue \u00e0 souscription qui vous a offert de publier votre article en Open Access moyennant le payement d'APC (hybride - ou des articles en Open Access et des articles \u00e0 acc\u00e8s payant coexistent)",
+                "value": "Fiche E21111"
+            }
+        ],
+        "parent": "10"
+    },
+    "12": {
         "label": "Est-ce que votre publication est diffus\u00e9e depuis une archive ouverte (Ex. archive ouverte institutionnelle, PubMed Central, Zenodo, archive ouverte disciplinaire\u2026) ?",
         "options": [
             {
@@ -169,23 +183,51 @@
                 "value": "Fiche E2111B"
             }
         ],
-        "parent": "10"
+        "parent": "11"
     },
-    "12": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+    "13": {
+        "label": "A quel programme appartient votre financement?",
         "options": [
             {
-                "option": "Pas encore",
-                "value": "13"
+                "option": "Horizon Europe",
+                "value": "14"
             },
             {
-                "option": "Oui",
-                "value": "14"
+                "option": "H2020",
+                "value": "15"
             }
         ],
         "parent": "10"
     },
-    "13": {
+    "14": {
+        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "options": [
+            {
+                "option": "Pas encore",
+                "value": "Fiche E21112Ap"
+            },
+            {
+                "option": "Oui",
+                "value": "Fiche E21112Bp"
+            }
+        ],
+        "parent": "13"
+    },
+    "15": {
+        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "options": [
+            {
+                "option": "Pas encore",
+                "value": "16"
+            },
+            {
+                "option": "Oui",
+                "value": "17"
+            }
+        ],
+        "parent": "13"
+    },
+    "16": {
         "label": "\u00c0 quel domaine de recherche votre recherche est-elle associ\u00e9e ?",
         "options": [
             {
@@ -197,23 +239,23 @@
                 "value": "Fiche E2112Ah"
             }
         ],
-        "parent": "12"
+        "parent": "15"
     },
-    "14": {
+    "17": {
         "label": "Est-ce que votre publication est diffus\u00e9e depuis une archive ouverte (Ex. archive ouverte institutionnelle, PubMed Central, Zenodo, archive ouverte disciplinaire\u2026) ?",
         "options": [
             {
                 "option": "Oui",
-                "value": "15"
+                "value": "18"
             },
             {
                 "option": "Non",
-                "value": "16"
+                "value": "19"
             }
         ],
-        "parent": "12"
+        "parent": "15"
     },
-    "15": {
+    "18": {
         "label": "\u00c0 quel domaine de recherche votre recherche est-elle associ\u00e9e ?",
         "options": [
             {
@@ -225,9 +267,9 @@
                 "value": "Fiche E21122Ah"
             }
         ],
-        "parent": "14"
+        "parent": "17"
     },
-    "16": {
+    "19": {
         "label": "\u00c0 quel domaine de recherche votre recherche est-elle associ\u00e9e ?",
         "options": [
             {
@@ -239,56 +281,42 @@
                 "value": "Fiche E21122Bh"
             }
         ],
-        "parent": "14"
+        "parent": "17"
     },
-    "17": {
-        "label": "Ce projet a officiellement d\u00e9marr\u00e9",
-        "options": [
-            {
-                "option": "Apr\u00e8s le 1er avril 2018",
-                "value": "18"
-            },
-            {
-                "option": "Avant le 1er avril 2018",
-                "value": "24"
-            }
-        ],
-        "parent": "8"
-    },
-    "18": {
+    "20": {
         "label": "Quel est le format de votre publication?",
         "options": [
             {
                 "option": "Article",
-                "value": "19"
+                "value": "21"
             },
             {
                 "option": "Chapitre de livre",
-                "value": "22"
+                "value": "26"
             },
             {
                 "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
                 "value": "Fiche S221A"
             }
         ],
-        "parent": "17"
+        "parent": "8"
     },
-    "19": {
+    "21": {
         "label": "Votre article est ou sera :",
         "options": [
             {
                 "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
-                "value": "20"
+                "value": "22"
             },
             {
                 "option": "Diffus\u00e9 uniquement via un acc\u00e8s par abonnement",
-                "value": "21"
+                "value": "23"
             }
         ],
-        "parent": "18"
+        "parent": "20"
     },
-    "20": {
-        "label": "Quel est le type de revue ou votre article appraitra?",
+    "22": {
+        "label": "Quel est le type de revue o\u00f9 votre article appraitra?",
         "options": [
             {
                 "option": "Revue Open Access (Gold Open Access - tous les articles de la revue sont disponibles en Open Access)",
@@ -299,9 +327,37 @@
                 "value": "Fiche S22111B"
             }
         ],
-        "parent": "19"
+        "parent": "21"
     },
-    "21": {
+    "23": {
+        "label": "Ce projet a officiellement d\u00e9marr\u00e9",
+        "options": [
+            {
+                "option": "Apr\u00e8s le 1er janvier 2023",
+                "value": "24"
+            },
+            {
+                "option": "Avant le 1er janvier 2023",
+                "value": "25"
+            }
+        ],
+        "parent": "21"
+    },
+    "24": {
+        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
+        "options": [
+            {
+                "option": "Pas encore",
+                "value": "Fiche S21112Ap"
+            },
+            {
+                "option": "Oui",
+                "value": "Fiche S21112Bp"
+            }
+        ],
+        "parent": "23"
+    },
+    "25": {
         "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
         "options": [
             {
@@ -313,9 +369,9 @@
                 "value": "Fiche S22112B"
             }
         ],
-        "parent": "19"
+        "parent": "23"
     },
-    "22": {
+    "26": {
         "label": "Votre chapitre est ou sera :",
         "options": [
             {
@@ -324,12 +380,12 @@
             },
             {
                 "option": "Diffus\u00e9 uniquement via un acc\u00e8s payant",
-                "value": "23"
+                "value": "27"
             }
         ],
-        "parent": "18"
+        "parent": "20"
     },
-    "23": {
+    "27": {
         "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
         "options": [
             {
@@ -341,164 +397,6 @@
                 "value": "Fiche S22121B"
             }
         ],
-        "parent": "22"
-    },
-    "24": {
-        "label": "Votre publication a \u00e9t\u00e9 publi\u00e9",
-        "options": [
-            {
-                "option": "Apr\u00e8s le 1er avril 2018",
-                "value": "25"
-            },
-            {
-                "option": "Avant le 1er avril 2018",
-                "value": "32"
-            }
-        ],
-        "parent": "17"
-    },
-    "25": {
-        "label": "Quel est le format de votre publication?",
-        "options": [
-            {
-                "option": "Article",
-                "value": "26"
-            },
-            {
-                "option": "Chapitre de livre",
-                "value": "29"
-            },
-            {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
-                "value": "31"
-            }
-        ],
-        "parent": "24"
-    },
-    "26": {
-        "label": "Votre article est ou sera :",
-        "options": [
-            {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
-                "value": "27"
-            },
-            {
-                "option": "Diffus\u00e9 uniquement via un acc\u00e8s par abonnement",
-                "value": "28"
-            }
-        ],
-        "parent": "25"
-    },
-    "27": {
-        "label": "Quel est le type de revue ou votre article appraitra?",
-        "options": [
-            {
-                "option": "Revue Open Access (Gold Open Access - tous les articles de la revue sont disponibles en Open Access)",
-                "value": "Fiche S222111A"
-            },
-            {
-                "option": "Revue \u00e0 souscription qui vous a offert de publier votre article en Open Access moyennant le payement d'APC (hybride - ou des articles en Open Access et des articles \u00e0 acc\u00e8s payant coexistent)",
-                "value": "Fiche S222111B"
-            }
-        ],
         "parent": "26"
-    },
-    "28": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
-        "options": [
-            {
-                "option": "Pas encore",
-                "value": "Fiche S222112A"
-            },
-            {
-                "option": "Oui",
-                "value": "Fiche S222112B"
-            }
-        ],
-        "parent": "26"
-    },
-    "29": {
-        "label": "Votre chapitre est ou sera :",
-        "options": [
-            {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
-                "value": "Fiche S22212A"
-            },
-            {
-                "option": "Diffus\u00e9 uniquement via un acc\u00e8s payant",
-                "value": "30"
-            }
-        ],
-        "parent": "25"
-    },
-    "30": {
-        "label": "Avez-vous c\u00e9d\u00e9 des droits de diffusion exclusive \u00e0 votre \u00e9diteur ? (Ex. contrat sign\u00e9, acceptation de conditions g\u00e9n\u00e9rales de la revue\u2026)",
-        "options": [
-            {
-                "option": "Pas encore",
-                "value": "Fiche S222121A"
-            },
-            {
-                "option": "Oui",
-                "value": "Fiche S222121B"
-            }
-        ],
-        "parent": "29"
-    },
-    "31": {
-        "label": "Des ressources allou\u00e9es vous ont \u00e9t\u00e9 accord\u00e9es au titre de frais imputables?",
-        "options": [
-            {
-                "option": "Oui",
-                "value": "Fiche S22213A"
-            },
-            {
-                "option": "Non",
-                "value": "Fiche S22213B"
-            }
-        ],
-        "parent": "25"
-    },
-    "32": {
-        "label": "Quel est le format de votre publication?",
-        "options": [
-            {
-                "option": "Article",
-                "value": "33"
-            },
-            {
-                "option": "Livre (monographie, dissertation et habilitation, ouvrages collectifs)",
-                "value": "Fiche S2222A"
-            }
-        ],
-        "parent": "24"
-    },
-    "33": {
-        "label": "Votre article a \u00e9t\u00e9 :",
-        "options": [
-            {
-                "option": "Diffus\u00e9 en Gold Open Access sous une licence Creative Commons",
-                "value": "Fiche S22221A"
-            },
-            {
-                "option": "Diffus\u00e9 uniquement via un acc\u00e8s par abonnement",
-                "value": "34"
-            }
-        ],
-        "parent": "32"
-    },
-    "34": {
-        "label": "\u00c0 quel domaine de recherche votre recherche est-elle associ\u00e9e ?",
-        "options": [
-            {
-                "option": "Sciences naturelles et techniques",
-                "value": "Fiche S22221Bs"
-            },
-            {
-                "option": "Sciences humaines et sociales",
-                "value": "Fiche S22221Bh"
-            }
-        ],
-        "parent": "33"
     }
 }

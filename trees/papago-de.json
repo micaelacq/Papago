@@ -74,7 +74,7 @@
         "parent": "3"
     },
     "5": {
-        "label": "Ihr Kapitel ist zug\u00e4nglich oder wird zug\u00e4nglich sein \u00fcber...",
+        "label": "Ihr Kapitel ist zug\u00e4nglich oder wird zug\u00e4nglich sien \u00fcber...",
         "options": [
             {
                 "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
@@ -119,12 +119,12 @@
         "label": "Wer hat Ihre Forschung finanziert (Hauptfinanzierungsquelle)?",
         "options": [
             {
-                "option": "Horizon 2020",
+                "option": "Eurp\u00e4ische Kommission (H2020/Horizon Europe)",
                 "value": "9"
             },
             {
                 "option": "Schweizerischer Nationalfonds",
-                "value": "17"
+                "value": "21"
             }
         ],
         "parent": "0"
@@ -148,11 +148,15 @@
         "options": [
             {
                 "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "11"
+                "value": "12"
+            },
+            {
+                "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
+                "value": "12"
             },
             {
                 "option": "...ein Abonnement in gedruckter und/oder elektronischer Form",
-                "value": "12"
+                "value": "14"
             }
         ],
         "parent": "9"
@@ -172,20 +176,72 @@
         "parent": "10"
     },
     "12": {
-        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
+        "label": "In welcher Art von Zeitschrift wird Ihr Artikel rscheinen?",
         "options": [
             {
-                "option": "Noch nicht",
+                "option": "Durch Abonnemente finanzierte Zeitschrift, die Ihnen angeboten hat, Ihren Artikel gegen Bezahlung von zus\u00e4tzlichen Geb\u00fchren (APC) freizuschalten (hybride Zeitschrift, in der Open Access Artikel neben nicht frei zug\u00e4nglichen Artikeln verf\u00fcgbar sind)",
                 "value": "13"
-            },
-            {
-                "option": "Ja",
-                "value": "14"
             }
         ],
         "parent": "10"
     },
     "13": {
+        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
+        "options": [
+            {
+                "option": "Noch nicht",
+                "value": "Fiche E21112Ap"
+            },
+            {
+                "option": "Ja",
+                "value": "Fiche E21112Bp"
+            }
+        ],
+        "parent": "12"
+    },
+    "14": {
+        "label": "Zu welchem Programm geh\u00f6rt Ihre Finanzierung?",
+        "options": [
+            {
+                "option": "Horizon Europe",
+                "value": "15"
+            },
+            {
+                "option": "H2020",
+                "value": "16"
+            }
+        ],
+        "parent": "10"
+    },
+    "15": {
+        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
+        "options": [
+            {
+                "option": "Noch nicht",
+                "value": "Fiche E21112Ap"
+            },
+            {
+                "option": "Ja",
+                "value": "Fiche E21112Bp"
+            }
+        ],
+        "parent": "14"
+    },
+    "16": {
+        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
+        "options": [
+            {
+                "option": "Noch nicht",
+                "value": "17"
+            },
+            {
+                "option": "Ja",
+                "value": "18"
+            }
+        ],
+        "parent": "14"
+    },
+    "17": {
         "label": "Welchem Fachgebiet ist Ihre Forschung zuzuordnen?",
         "options": [
             {
@@ -194,26 +250,26 @@
             },
             {
                 "option": "Geistes- und Sozialwissenschaften",
-                "value": "Fiche E21122Bh"
+                "value": "Fiche E2112Ah"
             }
         ],
-        "parent": "12"
+        "parent": "16"
     },
-    "14": {
+    "18": {
         "label": "Ist Ihre Publikation \u00fcber einen \u00f6ffentlich zug\u00e4nglichen Server zug\u00e4nglich (z.B. institutioneller Server, PubMed Central, Zenodo, thematisches Repositorium\u2026)?",
         "options": [
             {
                 "option": "Ja",
-                "value": "15"
+                "value": "19"
             },
             {
                 "option": "Nein",
-                "value": "16"
+                "value": "20"
             }
         ],
-        "parent": "12"
+        "parent": "16"
     },
-    "15": {
+    "19": {
         "label": "Welchem Fachgebiet ist Ihre Forschung zuzuordnen?",
         "options": [
             {
@@ -225,9 +281,9 @@
                 "value": "Fiche E21122Ah"
             }
         ],
-        "parent": "14"
+        "parent": "18"
     },
-    "16": {
+    "20": {
         "label": "Welchem Fachgebiet ist Ihre Forschung zuzuordnen?",
         "options": [
             {
@@ -239,55 +295,41 @@
                 "value": "Fiche E21122Bh"
             }
         ],
-        "parent": "14"
+        "parent": "18"
     },
-    "17": {
-        "label": "Offizieller Beginn dieses Forschungsprojekts:",
-        "options": [
-            {
-                "option": "Nach dem 1. April 2018",
-                "value": "18"
-            },
-            {
-                "option": "Vor dem 1. April 2018",
-                "value": "24"
-            }
-        ],
-        "parent": "8"
-    },
-    "18": {
+    "21": {
         "label": "Welches Format hat Ihre Publikation?",
         "options": [
             {
                 "option": "Artikel",
-                "value": "19"
+                "value": "22"
             },
             {
                 "option": "Buchkapitel",
-                "value": "22"
+                "value": "27"
             },
             {
                 "option": "Buch (Monographie, Dissertation, Habilitation, Sammelschrift)",
                 "value": "Fiche S221A"
             }
         ],
-        "parent": "17"
+        "parent": "8"
     },
-    "19": {
+    "22": {
         "label": "Ihre Publikation ist oder wird zug\u00e4nglich sein \u00fcber...",
         "options": [
             {
                 "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "20"
+                "value": "23"
             },
             {
                 "option": "...ein Abonnement in gedruckter und/oder elektronischer Form",
-                "value": "21"
+                "value": "24"
             }
         ],
-        "parent": "18"
+        "parent": "21"
     },
-    "20": {
+    "23": {
         "label": "In welcher Art Zeitschrift wird Ihr Artikel erscheinen?",
         "options": [
             {
@@ -299,9 +341,37 @@
                 "value": "Fiche S22111B"
             }
         ],
-        "parent": "19"
+        "parent": "22"
     },
-    "21": {
+    "24": {
+        "label": "Offiziell hat Ihr Projekt begonnen...",
+        "options": [
+            {
+                "option": "...nach dem 1. Januar 2023",
+                "value": "25"
+            },
+            {
+                "option": "...vor dem 1. Januar 2023",
+                "value": "26"
+            }
+        ],
+        "parent": "22"
+    },
+    "25": {
+        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
+        "options": [
+            {
+                "option": "Noch nicht",
+                "value": "Fiche S21112Ap"
+            },
+            {
+                "option": "Ja",
+                "value": "Fiche S21112Bp"
+            }
+        ],
+        "parent": "24"
+    },
+    "26": {
         "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
         "options": [
             {
@@ -313,9 +383,9 @@
                 "value": "Fiche S22112B"
             }
         ],
-        "parent": "19"
+        "parent": "24"
     },
-    "22": {
+    "27": {
         "label": "Ihre Publikation ist oder wird zug\u00e4nglich sein \u00fcber...",
         "options": [
             {
@@ -324,12 +394,12 @@
             },
             {
                 "option": "...einen kostenpflichtigen Zugang",
-                "value": "23"
+                "value": "28"
             }
         ],
-        "parent": "18"
+        "parent": "21"
     },
-    "23": {
+    "28": {
         "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
         "options": [
             {
@@ -341,164 +411,6 @@
                 "value": "Fiche S22122B"
             }
         ],
-        "parent": "22"
-    },
-    "24": {
-        "label": "Ihre Publikation wurde ver\u00f6ffentlicht",
-        "options": [
-            {
-                "option": "Nach dem 1. April 2018",
-                "value": "25"
-            },
-            {
-                "option": "Vor dem 1. April 2018",
-                "value": "32"
-            }
-        ],
-        "parent": "17"
-    },
-    "25": {
-        "label": "Welches Format hat Ihre Publikation?",
-        "options": [
-            {
-                "option": "Artikel",
-                "value": "26"
-            },
-            {
-                "option": "Buchkapitel",
-                "value": "29"
-            },
-            {
-                "option": "Buch (Monographie, Dissertation, Habilitation, Sammelschrift)",
-                "value": "31"
-            }
-        ],
-        "parent": "24"
-    },
-    "26": {
-        "label": "Ihre Publikation ist oder wird zug\u00e4nglich sein \u00fcber...",
-        "options": [
-            {
-                "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "27"
-            },
-            {
-                "option": "...ein Abonnement in gedruckter und/oder elektronischer Form",
-                "value": "28"
-            }
-        ],
-        "parent": "25"
-    },
-    "27": {
-        "label": "In welcher Art Zeitschrift wird Ihr Artikel erscheinen?",
-        "options": [
-            {
-                "option": "Open Access-Zeitschrift (Gold Open Access - alle Artikel der Zeitschrift sind frei zug\u00e4nglich)",
-                "value": "Fiche S222111A"
-            },
-            {
-                "option": "Durch Abonnemente finanzierte Zeitschrift, die Ihnen angeboten hat, Ihren Artikel gegen Bezahlung von zus\u00e4tzlichen Geb\u00fchren (APC) freizuschalten (hybride Zeitschrift, in der Open Access Artikel neben nicht frei zug\u00e4nglichen Artikeln verf\u00fcgbar sind)",
-                "value": "Fiche S222111B"
-            }
-        ],
-        "parent": "26"
-    },
-    "28": {
-        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
-        "options": [
-            {
-                "option": "Noch nicht",
-                "value": "Fiche S222112A"
-            },
-            {
-                "option": "Ja",
-                "value": "Fiche S222112B"
-            }
-        ],
-        "parent": "26"
-    },
-    "29": {
-        "label": "Ihre Publikation ist oder wird zug\u00e4nglich sein \u00fcber...",
-        "options": [
-            {
-                "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "Fiche S22212A"
-            },
-            {
-                "option": "...einen kostenpflichtigen Zugang",
-                "value": "30"
-            }
-        ],
-        "parent": "25"
-    },
-    "30": {
-        "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
-        "options": [
-            {
-                "option": "Noch nicht",
-                "value": "Fiche S222122A"
-            },
-            {
-                "option": "Ja",
-                "value": "Fiche S222122B"
-            }
-        ],
-        "parent": "29"
-    },
-    "31": {
-        "label": "Wurden Ihnen zus\u00e4tzliche Mittel f\u00fcr die Publikation bewilligt?",
-        "options": [
-            {
-                "option": "Ja",
-                "value": "Fiche S22213A"
-            },
-            {
-                "option": "Nein",
-                "value": "Fiche S22213B"
-            }
-        ],
-        "parent": "25"
-    },
-    "32": {
-        "label": "Welches Format hat Ihre Publikation?",
-        "options": [
-            {
-                "option": "Artikel",
-                "value": "33"
-            },
-            {
-                "option": "Buch (Monographie, Dissertation, Habilitation, Sammelschrift)",
-                "value": "Fiche S2222A"
-            }
-        ],
-        "parent": "24"
-    },
-    "33": {
-        "label": "Ihre Publikation ist oder wird zug\u00e4nglich sein \u00fcber...",
-        "options": [
-            {
-                "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "Fiche S22221A"
-            },
-            {
-                "option": "...ein Abonnement in gedruckter und/oder elektronischer Form",
-                "value": "34"
-            }
-        ],
-        "parent": "32"
-    },
-    "34": {
-        "label": "Welchem Fachgebiet ist Ihre Forschung zuzuordnen?",
-        "options": [
-            {
-                "option": "Naturwissenschaften und Technik",
-                "value": "Fiche S22221Bs"
-            },
-            {
-                "option": "Geistes- und Sozialwissenschaften",
-                "value": "Fiche S22221Bh"
-            }
-        ],
-        "parent": "33"
+        "parent": "27"
     }
 }
