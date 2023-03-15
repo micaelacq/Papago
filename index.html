@@ -15,13 +15,15 @@ var lang = "fr";
 var papagoUrl = "https://raw.githubusercontent.com/micaelacq/Papago/master/trees/";
 //URL for information pdf sheets (including trailing slash)
 var pdfUrl = "https://webapps.unifr.ch/papago/pdf/";
+//URL for Read & Publish Agreements API
+var rapapi = "https://webapps.unifr.ch/papago/rapapi/";
 //suffix for pdf sheets (including ".")
 var pdfSuffix = ".pdf";
 //default institution (for institutional personalization, with preceeding underscore)
 var inst = '_unil';
 // *** parameters end **
 
-var jSearch = ["111A", "1111A", "1111B", "12A", "S22112A", "S22112B", "S222112A", "S222112B", "S22221Bs", "S22221Bb", "E2112As", "E2112Ah", "E21122As", "E21122Ah", "E21122Bs", "E21122Bh", "S222111B", "S22111B", "111A", "E2111A", "E2111B","S22111A", "S222111A"];
+var jSearch = ["111A","1111A","1111B","E2111A","E2111B","E21111","E21112Ap","E21112Bp","E2112As","E2112Ah","E21122As","E21122Ah","E21122Bs","E21122Bh","S22111A","S22111B","S21112Ap","S21112Bp","S22112A","S22112B"];
 
 var translate = {
     "fr" : {
@@ -152,7 +154,7 @@ $(document).ready(function(){
         $.ajax({
           type: "GET",        
           crossDomain: true,
-          url: 'https://webapps.unifr.ch/papago/rapapi/title/' +jTitle})
+          url: rapapi + 'title/' +jTitle})
         .done(function(data) {
           pattern = new RegExp(jTitle, 'gi');
           jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
