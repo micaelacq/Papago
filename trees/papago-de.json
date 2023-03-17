@@ -148,7 +148,7 @@
         "options": [
             {
                 "option": "...Gold Open Access unter einer Creative Commons-Lizenz",
-                "value": "12"
+                "value": "11"
             },
             {
                 "option": "...ein Abonnement in gedruckter und/oder elektronischer Form",
@@ -158,6 +158,20 @@
         "parent": "9"
     },
     "11": {
+        "label": "In welcher Art von Zeitschrift wird Ihr Artikel rscheinen?",
+        "options": [
+            {
+                "option": "Open Access-Zeitschrift (Gold Open Access - alle Artikel ind im Open Access verf\u00fcgbar)",
+                "value": "12"
+            },
+            {
+                "option": "Durch Abonnemente finanzierte Zeitschrift, die Ihnen angeboten hat, Ihren Artikel gegen Bezahlung von zus\u00e4tzlichen Geb\u00fchren (APC) freizuschalten (hybride Zeitschrift, in der Open Access Artikel neben nicht frei zug\u00e4nglichen Artikeln verf\u00fcgbar sind)",
+                "value": "13"
+            }
+        ],
+        "parent": "10"
+    },
+    "12": {
         "label": "Ist Ihre Publikation \u00fcber einen \u00f6ffentlich zug\u00e4nglichen Server zug\u00e4nglich (z.B. institutioneller Server, PubMed Central, Zenodo, thematisches Repositorium\u2026)?",
         "options": [
             {
@@ -169,17 +183,7 @@
                 "value": "Fiche E2111B"
             }
         ],
-        "parent": "10"
-    },
-    "12": {
-        "label": "In welcher Art von Zeitschrift wird Ihr Artikel rscheinen?",
-        "options": [
-            {
-                "option": "Durch Abonnemente finanzierte Zeitschrift, die Ihnen angeboten hat, Ihren Artikel gegen Bezahlung von zus\u00e4tzlichen Geb\u00fchren (APC) freizuschalten (hybride Zeitschrift, in der Open Access Artikel neben nicht frei zug\u00e4nglichen Artikeln verf\u00fcgbar sind)",
-                "value": "13"
-            }
-        ],
-        "parent": "10"
+        "parent": "11"
     },
     "13": {
         "label": "Haben Sie Ihrem Verlag die ausschliesslichen Nutzungsrechte abgetreten (unterschriebener Vertrag oder Akzeptierung der allgemeinen Bedingungen der Zeitschrift...)?",
@@ -193,7 +197,7 @@
                 "value": "Fiche E21112Bp"
             }
         ],
-        "parent": "12"
+        "parent": "11"
     },
     "14": {
         "label": "Zu welchem Programm geh\u00f6rt Ihre Finanzierung?",
