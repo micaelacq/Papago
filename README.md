@@ -1,4 +1,4 @@
-# Papago
+# Papago (ZHAW)
 The assistant who gives you personalised advice on your rights, obligations and funding opportunities regarding Open Access publishing in Switzerland
 
 1. [General information](#1-general-information)
