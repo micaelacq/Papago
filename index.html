@@ -168,10 +168,10 @@ $(document).ready(function(){
                     if (match) {
                         title = title.replace(match[0], '<b>' + match +'</b>');
                     }
-                    jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
+                    jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + '~' + issn +'\')"><i class="fa fa-arrow-right"></i>&nbsp;' + title + ' (ISSN: ' + issn + ')</a>';
                 }
             });
-            jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + ':jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
+            jList = jList + '<a class="list-group-item list-group-item-action btn" style="text-align:left; text-decoration:none; white-space:normal;" href="javascript:format(\'' + sheet + '~jna\')"><i class="fa fa-arrow-right"></i>&nbsp;' + translate[lang]['jDefault'] + '</a></div>';
             $('div.list-group').remove();
             $('#question').append(jList);
           }
