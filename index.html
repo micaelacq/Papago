@@ -184,7 +184,7 @@ $(document).ready(function(){
               //jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
               journals = data.items;
               if(journals.length > 0) {
-                pattern = new RegExp(jTitle, 'gi');agik-ch
+                pattern = new RegExp(jTitle, 'gi');
                 $.each(journals, function(index, journal){
                     issn = journal['issns'][0]['issn'];
                     if (issn) {
