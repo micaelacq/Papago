@@ -178,8 +178,9 @@ $(document).ready(function(){
           else {
             $.ajax({
               tpye: "GET",
+			  headers: { 'x-api-key': 'FF5C7B90-1032-11EA-9359-7FE62A6A9D3C' }
               crossDomain:true,
-              url: 'https://v2.sherpa.ac.uk/cgi/retrieve?item-type=publication&api-key=FF5C7B90-1032-11EA-9359-7FE62A6A9D3C&format=Json&filter=[["title","contains word","' + sTitle + '*"]]'})
+              url: 'https://api.openpolicyfinder.jisc.ac.uk/retrieve?item-type=publication&format=Json&filter=[["title","contains word","' + sTitle + '*"]]'})
             .done(function(data) {
               //jList = '<div class="list-group btn-group-vertical" role="group" style="max-width:1000px; width:100%">';
               journals = data.items;
