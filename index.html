@@ -178,7 +178,7 @@ $(document).ready(function(){
           else {
             $.ajax({
               tpye: "GET",
-			  headers: { 'x-api-key': 'FF5C7B90-1032-11EA-9359-7FE62A6A9D3C' }
+			  headers: { 'x-api-key': 'FF5C7B90-1032-11EA-9359-7FE62A6A9D3C' },
               crossDomain:true,
               url: 'https://api.openpolicyfinder.jisc.ac.uk/retrieve?item-type=publication&format=Json&filter=[["title","contains word","' + sTitle + '*"]]'})
             .done(function(data) {
