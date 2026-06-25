@@ -150,6 +150,7 @@ $(document).ready(function(){
     jTitle = $('#jsearch').val();
     if (jTitle != '') {
         sTitle = jTitle.replace('&','and');
+		sTitle = sTitle.replace(' ','"20"');
         
         $.ajax({
           type: "GET",        
